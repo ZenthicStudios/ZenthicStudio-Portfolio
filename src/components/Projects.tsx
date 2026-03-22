@@ -161,6 +161,15 @@ function Projects() {
         project_link: 'https://www.roblox.com/games/105368692401484/Raft-for-Brainrots',
         youtube_link: '',
         order_index: 6
+      },
+      {
+        id: '7',
+        title: 'Brainrot Case Battles',
+        description: '100% Solo Development - Built complete battle system, advanced RNG system, pets system, egg hatch system, and additional polished gameplay features',
+        image: 'https://tr.rbxcdn.com/180DAY-3711182c57981d16d1886efae9350098/768/432/Image/Webp/noFilter',
+        project_link: 'https://www.roblox.com/games/121757448540678/Brainrot-Case-Battles',
+        youtube_link: '',
+        order_index: 7
       }
     ];
 

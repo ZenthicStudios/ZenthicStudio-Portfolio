@@ -87,7 +87,7 @@ function ProjectCard({ project, rank }: ProjectCardProps) {
           <h3 className="text-2xl font-bold text-white mb-3">{project.title}</h3>
           <p className="text-gray-400 leading-relaxed">{project.description}</p>
         </div>
-        
+        <a
           href={project.project_link || '#'}
           target="_blank"
           rel="noopener noreferrer"
@@ -179,7 +179,7 @@ function Projects() {
         project_link: 'https://www.roblox.com/games/112192910084846/Build-And-Seek',
         youtube_link: '',
         order_index: 8
-      }
+      },
     ];
 
     setProjects(defaultProjects);

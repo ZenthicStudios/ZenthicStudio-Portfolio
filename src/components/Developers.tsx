@@ -1,4 +1,4 @@
-import { Code2, Zap } from 'lucide-react';
+import { Code2 } from 'lucide-react';
 
 function Developers() {
   return (
@@ -46,42 +46,6 @@ function Developers() {
               <li className="flex items-center gap-2">
                 <span className="w-2 h-2 bg-yellow-400 rounded-full" />
                 Full-Scale Game Development
-              </li>
-            </ul>
-          </div>
-
-          <div className="bg-gray-800 border border-yellow-500/40 backdrop-blur-sm p-8 rounded-xl transition-all duration-300 hover:border-yellow-500 hover:shadow-[0_0_25px_rgba(234,179,8,0.25)] hover:scale-105 relative overflow-hidden group">
-            <div className="absolute inset-0 bg-yellow-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl" />
-            <div className="flex items-start gap-4 mb-4 relative z-10">
-              <div className="p-3 bg-gray-900 rounded-lg border border-yellow-500/50">
-                <Zap className="w-8 h-8 text-yellow-400" />
-              </div>
-              <div>
-                <h3 className="text-2xl font-bold text-white mb-1">Kexy</h3>
-                <p className="text-yellow-400 font-semibold">Co Owner</p>
-              </div>
-            </div>
-            <p className="text-gray-300 mb-6 relative z-10 font-medium">5 years of experience</p>
-            <ul className="space-y-2 text-gray-400 relative z-10">
-              <li className="flex items-center gap-2">
-                <span className="w-2 h-2 bg-yellow-400 rounded-full" />
-                Physics Systems
-              </li>
-              <li className="flex items-center gap-2">
-                <span className="w-2 h-2 bg-yellow-400 rounded-full" />
-                Combat Mechanics
-              </li>
-              <li className="flex items-center gap-2">
-                <span className="w-2 h-2 bg-yellow-400 rounded-full" />
-                Vehicle Systems
-              </li>
-              <li className="flex items-center gap-2">
-                <span className="w-2 h-2 bg-yellow-400 rounded-full" />
-                Datastore Architecture
-              </li>
-              <li className="flex items-center gap-2">
-                <span className="w-2 h-2 bg-yellow-400 rounded-full" />
-                Advanced Scripting
               </li>
             </ul>
           </div>

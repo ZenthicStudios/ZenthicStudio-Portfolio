@@ -107,7 +107,7 @@ function Projects() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const defaultProjects: Project[] = [
+const defaultProjects: Project[] = [
   {
     id: '8',
     title: 'Build And Seek',
@@ -116,15 +116,6 @@ function Projects() {
     project_link: 'https://www.roblox.com/games/112192910084846/Build-And-Seek',
     youtube_link: '',
     order_index: 1
-  },
-  {
-    id: '9',
-    title: "Don't Let Brainrots Break The Wall!",
-    description: '100% Solo Development - Brainrot spawning, gun system, wave system, and more',
-    image: 'https://tr.rbxcdn.com/180DAY-6857d2c6572c7a908be6ef2b7aa9ad33/768/432/Image/Webp/noFilter',
-    project_link: 'https://www.roblox.com/games/101926178513156/Dont-Let-Brainrots-Break-The-Wall',
-    youtube_link: '',
-    order_index: 10
   },
   {
     id: '2',
@@ -154,13 +145,22 @@ function Projects() {
     order_index: 4
   },
   {
-    id: '4',
-    title: 'Shoot Christmas Brainrots!',
-    description: '80%+ Contribution - Complete system overhaul, enhanced combat mechanics, and expanded feature implementation',
-    image: 'https://tr.rbxcdn.com/180DAY-8c2d2fab7e8cee24c72ed2d103c83280/768/432/Image/Webp/noFilter',
-    project_link: 'https://www.roblox.com/games/124847429445425/Shoot-Christmas-Brainrots',
+    id: '10',
+    title: 'Imposter Mystery',
+    description: '100% Solo Development - Gameplay loop, gun system, knife throw system, UI functionality, custom cutscenes, and more',
+    image: 'https://tr.rbxcdn.com/180DAY-fd4239ad90547f394e6e6a93e2292d78/768/432/Image/Webp/noFilter',
+    project_link: 'https://www.roblox.com/games/76769173141548/IMPOSTER-MYSTERY',
     youtube_link: '',
-    order_index: 9
+    order_index: 5
+  },
+  {
+    id: '7',
+    title: 'Brainrot Case Battles',
+    description: '100% Solo Development - Built complete battle system, advanced RNG system, pets system, egg hatch system, and additional polished gameplay features',
+    image: 'https://tr.rbxcdn.com/180DAY-3711182c57981d16d1886efae9350098/768/432/Image/Webp/noFilter',
+    project_link: 'https://www.roblox.com/games/121757448540678/Brainrot-Case-Battles',
+    youtube_link: '',
+    order_index: 6
   },
   {
     id: '5',
@@ -181,23 +181,23 @@ function Projects() {
     order_index: 8
   },
   {
-    id: '7',
-    title: 'Brainrot Case Battles',
-    description: '100% Solo Development - Built complete battle system, advanced RNG system, pets system, egg hatch system, and additional polished gameplay features',
-    image: 'https://tr.rbxcdn.com/180DAY-3711182c57981d16d1886efae9350098/768/432/Image/Webp/noFilter',
-    project_link: 'https://www.roblox.com/games/121757448540678/Brainrot-Case-Battles',
+    id: '4',
+    title: 'Shoot Christmas Brainrots!',
+    description: '80%+ Contribution - Complete system overhaul, enhanced combat mechanics, and expanded feature implementation',
+    image: 'https://tr.rbxcdn.com/180DAY-8c2d2fab7e8cee24c72ed2d103c83280/768/432/Image/Webp/noFilter',
+    project_link: 'https://www.roblox.com/games/124847429445425/Shoot-Christmas-Brainrots',
     youtube_link: '',
-    order_index: 6
+    order_index: 9
   },
   {
-    id: '10',
-    title: 'Imposter Mystery',
-    description: '100% Solo Development - Gameplay loop, gun system, knife throw system, UI functionality, custom cutscenes, and more',
-    image: 'https://tr.rbxcdn.com/180DAY-fd4239ad90547f394e6e6a93e2292d78/768/432/Image/Webp/noFilter',
-    project_link: 'https://www.roblox.com/games/76769173141548/IMPOSTER-MYSTERY',
+    id: '9',
+    title: "Don't Let Brainrots Break The Wall!",
+    description: '100% Solo Development - Brainrot spawning, gun system, wave system, and more',
+    image: 'https://tr.rbxcdn.com/180DAY-6857d2c6572c7a908be6ef2b7aa9ad33/768/432/Image/Webp/noFilter',
+    project_link: 'https://www.roblox.com/games/101926178513156/Dont-Let-Brainrots-Break-The-Wall',
     youtube_link: '',
-    order_index: 5
-  },
+    order_index: 10
+  }
 ];
 
     setProjects(defaultProjects);

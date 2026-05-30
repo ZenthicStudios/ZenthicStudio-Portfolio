@@ -124,7 +124,7 @@ function Projects() {
     image: 'https://tr.rbxcdn.com/180DAY-6857d2c6572c7a908be6ef2b7aa9ad33/768/432/Image/Webp/noFilter',
     project_link: 'https://www.roblox.com/games/101926178513156/Dont-Let-Brainrots-Break-The-Wall',
     youtube_link: '',
-    order_index: 2
+    order_index: 10
   },
   {
     id: '2',
@@ -133,7 +133,7 @@ function Projects() {
     image: 'https://tr.rbxcdn.com/180DAY-2b931a486fc53e41e42ab921e5267b11/768/432/Image/Webp/noFilter',
     project_link: 'https://www.roblox.com/games/112476889534187/Bliss-City-RP',
     youtube_link: '',
-    order_index: 3
+    order_index: 2
   },
   {
     id: '1',
@@ -142,7 +142,7 @@ function Projects() {
     image: 'https://tr.rbxcdn.com/180DAY-06287739cbd0f1932ba09f8e25fc3100/768/432/Image/Webp/noFilter',
     project_link: 'https://www.roblox.com/games/96863560044075/LB-Grow-a-Lab',
     youtube_link: '',
-    order_index: 4
+    order_index: 3
   },
   {
     id: '3',
@@ -151,7 +151,7 @@ function Projects() {
     image: 'https://tr.rbxcdn.com/180DAY-e8cce3f4e30e62860bd573e555f8abb5/768/432/Image/Webp/noFilter',
     project_link: 'https://www.roblox.com/games/92054108165942/Skylands-Tycoon',
     youtube_link: '',
-    order_index: 5
+    order_index: 4
   },
   {
     id: '4',
@@ -160,7 +160,7 @@ function Projects() {
     image: 'https://tr.rbxcdn.com/180DAY-8c2d2fab7e8cee24c72ed2d103c83280/768/432/Image/Webp/noFilter',
     project_link: 'https://www.roblox.com/games/124847429445425/Shoot-Christmas-Brainrots',
     youtube_link: '',
-    order_index: 6
+    order_index: 9
   },
   {
     id: '5',
@@ -187,7 +187,7 @@ function Projects() {
     image: 'https://tr.rbxcdn.com/180DAY-3711182c57981d16d1886efae9350098/768/432/Image/Webp/noFilter',
     project_link: 'https://www.roblox.com/games/121757448540678/Brainrot-Case-Battles',
     youtube_link: '',
-    order_index: 9
+    order_index: 6
   },
   {
     id: '10',
@@ -196,7 +196,7 @@ function Projects() {
     image: 'https://tr.rbxcdn.com/180DAY-fd4239ad90547f394e6e6a93e2292d78/768/432/Image/Webp/noFilter',
     project_link: 'https://www.roblox.com/games/76769173141548/IMPOSTER-MYSTERY',
     youtube_link: '',
-    order_index: 10
+    order_index: 5
   },
 ];
 

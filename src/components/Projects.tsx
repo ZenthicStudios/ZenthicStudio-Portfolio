@@ -108,79 +108,97 @@ function Projects() {
 
   useEffect(() => {
     const defaultProjects: Project[] = [
-      {
-        id: '2',
-        title: 'Bliss City RP',
-        description: '100% Solo Development - Full-stack architecture, advanced scripting systems, and performance optimization from foundation to deployment',
-        image: 'https://tr.rbxcdn.com/180DAY-2b931a486fc53e41e42ab921e5267b11/768/432/Image/Webp/noFilter',
-        project_link: 'https://www.roblox.com/games/112476889534187/Bliss-City-RP',
-        youtube_link: '',
-        order_index: 1
-      },
-      {
-        id: '1',
-        title: 'Grow a Lab',
-        description: '80%+ Contribution - UI/UX design, robust database architecture, and comprehensive systems implementation',
-        image: 'https://tr.rbxcdn.com/180DAY-06287739cbd0f1932ba09f8e25fc3100/768/432/Image/Webp/noFilter',
-        project_link: 'https://www.roblox.com/games/96863560044075/LB-Grow-a-Lab',
-        youtube_link: '',
-        order_index: 2
-      },
-      {
-        id: '3',
-        title: 'Skylands Tycoon',
-        description: '100% Solo Development - Complete framework architecture, refined mechanics, and polished gameplay systems',
-        image: 'https://tr.rbxcdn.com/180DAY-e8cce3f4e30e62860bd573e555f8abb5/768/432/Image/Webp/noFilter',
-        project_link: 'https://www.roblox.com/games/92054108165942/Skylands-Tycoon',
-        youtube_link: '',
-        order_index: 3
-      },
-      {
-        id: '4',
-        title: 'Shoot Christmas Brainrots!',
-        description: '80%+ Contribution - Complete system overhaul, enhanced combat mechanics, and expanded feature implementation',
-        image: 'https://tr.rbxcdn.com/180DAY-8c2d2fab7e8cee24c72ed2d103c83280/768/432/Image/Webp/noFilter',
-        project_link: 'https://www.roblox.com/games/124847429445425/Shoot-Christmas-Brainrots',
-        youtube_link: '',
-        order_index: 4
-      },
-      {
-        id: '5',
-        title: 'Plants Vs Anime Baddies',
-        description: '100% Solo Development - Complete game design, all systems from concept through launch, polished visuals and mechanics',
-        image: 'https://tr.rbxcdn.com/180DAY-28f65669caeee8a1aa97c9bb97f745e1/768/432/Image/Webp/noFilter',
-        project_link: 'https://www.roblox.com/games/134696938350562/Plants-Vs-Anime-Baddies',
-        youtube_link: '',
-        order_index: 5
-      },
-      {
-        id: '6',
-        title: 'Raft for Brainrots',
-        description: '100% Solo Development - Everything from brianto spawning, custom water mechanics, raft system, raft mechanics, water physics, and more',
-        image: 'https://tr.rbxcdn.com/180DAY-3f1134e675119c1fa9433c9e0a06ac3f/768/432/Image/Webp/noFilter',
-        project_link: 'https://www.roblox.com/games/105368692401484/Raft-for-Brainrots',
-        youtube_link: '',
-        order_index: 6
-      },
-      {
-        id: '7',
-        title: 'Brainrot Case Battles',
-        description: '100% Solo Development - Built complete battle system, advanced RNG system, pets system, egg hatch system, and additional polished gameplay features',
-        image: 'https://tr.rbxcdn.com/180DAY-3711182c57981d16d1886efae9350098/768/432/Image/Webp/noFilter',
-        project_link: 'https://www.roblox.com/games/121757448540678/Brainrot-Case-Battles',
-        youtube_link: '',
-        order_index: 7
-      },
-      {
-        id: '8',
-        title: 'Build And Seek',
-        description: '100% Solo Development - Placement system, round system, guns system, guns VFX, and more',
-        image: 'https://tr.rbxcdn.com/180DAY-aa9e1f81d46fab026d26cc28bbababa4/768/432/Image/Webp/noFilter',
-        project_link: 'https://www.roblox.com/games/112192910084846/Build-And-Seek',
-        youtube_link: '',
-        order_index: 8
-      },
-    ];
+  {
+    id: '8',
+    title: 'Build And Seek',
+    description: '100% Solo Development - Placement system, round system, guns system, guns VFX, and more',
+    image: 'https://tr.rbxcdn.com/180DAY-aa9e1f81d46fab026d26cc28bbababa4/768/432/Image/Webp/noFilter',
+    project_link: 'https://www.roblox.com/games/112192910084846/Build-And-Seek',
+    youtube_link: '',
+    order_index: 1
+  },
+  {
+    id: '9',
+    title: "Don't Let Brainrots Break The Wall!",
+    description: '100% Solo Development - Brainrot spawning, gun system, wave system, and more',
+    image: 'https://tr.rbxcdn.com/180DAY-6857d2c6572c7a908be6ef2b7aa9ad33/768/432/Image/Webp/noFilter',
+    project_link: 'https://www.roblox.com/games/101926178513156/Dont-Let-Brainrots-Break-The-Wall',
+    youtube_link: '',
+    order_index: 2
+  },
+  {
+    id: '2',
+    title: 'Bliss City RP',
+    description: '100% Solo Development - Full-stack architecture, advanced scripting systems, and performance optimization from foundation to deployment',
+    image: 'https://tr.rbxcdn.com/180DAY-2b931a486fc53e41e42ab921e5267b11/768/432/Image/Webp/noFilter',
+    project_link: 'https://www.roblox.com/games/112476889534187/Bliss-City-RP',
+    youtube_link: '',
+    order_index: 3
+  },
+  {
+    id: '1',
+    title: 'Grow a Lab',
+    description: '80%+ Contribution - UI/UX design, robust database architecture, and comprehensive systems implementation',
+    image: 'https://tr.rbxcdn.com/180DAY-06287739cbd0f1932ba09f8e25fc3100/768/432/Image/Webp/noFilter',
+    project_link: 'https://www.roblox.com/games/96863560044075/LB-Grow-a-Lab',
+    youtube_link: '',
+    order_index: 4
+  },
+  {
+    id: '3',
+    title: 'Skylands Tycoon',
+    description: '100% Solo Development - Complete framework architecture, refined mechanics, and polished gameplay systems',
+    image: 'https://tr.rbxcdn.com/180DAY-e8cce3f4e30e62860bd573e555f8abb5/768/432/Image/Webp/noFilter',
+    project_link: 'https://www.roblox.com/games/92054108165942/Skylands-Tycoon',
+    youtube_link: '',
+    order_index: 5
+  },
+  {
+    id: '4',
+    title: 'Shoot Christmas Brainrots!',
+    description: '80%+ Contribution - Complete system overhaul, enhanced combat mechanics, and expanded feature implementation',
+    image: 'https://tr.rbxcdn.com/180DAY-8c2d2fab7e8cee24c72ed2d103c83280/768/432/Image/Webp/noFilter',
+    project_link: 'https://www.roblox.com/games/124847429445425/Shoot-Christmas-Brainrots',
+    youtube_link: '',
+    order_index: 6
+  },
+  {
+    id: '5',
+    title: 'Plants Vs Anime Baddies',
+    description: '100% Solo Development - Complete game design, all systems from concept through launch, polished visuals and mechanics',
+    image: 'https://tr.rbxcdn.com/180DAY-28f65669caeee8a1aa97c9bb97f745e1/768/432/Image/Webp/noFilter',
+    project_link: 'https://www.roblox.com/games/134696938350562/Plants-Vs-Anime-Baddies',
+    youtube_link: '',
+    order_index: 7
+  },
+  {
+    id: '6',
+    title: 'Raft for Brainrots',
+    description: '100% Solo Development - Everything from brainrot spawning, custom water mechanics, raft system, raft mechanics, water physics, and more',
+    image: 'https://tr.rbxcdn.com/180DAY-3f1134e675119c1fa9433c9e0a06ac3f/768/432/Image/Webp/noFilter',
+    project_link: 'https://www.roblox.com/games/105368692401484/Raft-for-Brainrots',
+    youtube_link: '',
+    order_index: 8
+  },
+  {
+    id: '7',
+    title: 'Brainrot Case Battles',
+    description: '100% Solo Development - Built complete battle system, advanced RNG system, pets system, egg hatch system, and additional polished gameplay features',
+    image: 'https://tr.rbxcdn.com/180DAY-3711182c57981d16d1886efae9350098/768/432/Image/Webp/noFilter',
+    project_link: 'https://www.roblox.com/games/121757448540678/Brainrot-Case-Battles',
+    youtube_link: '',
+    order_index: 9
+  },
+  {
+    id: '10',
+    title: 'Imposter Mystery',
+    description: '100% Solo Development - Gameplay loop, gun system, knife throw system, UI functionality, custom cutscenes, and more',
+    image: 'https://tr.rbxcdn.com/180DAY-fd4239ad90547f394e6e6a93e2292d78/768/432/Image/Webp/noFilter',
+    project_link: 'https://www.roblox.com/games/76769173141548/IMPOSTER-MYSTERY',
+    youtube_link: '',
+    order_index: 10
+  },
+];
 
     setProjects(defaultProjects);
     setLoading(false);

@@ -54,7 +54,7 @@ function StatCard({ icon, value, label, delay }: StatCardProps) {
       return () => clearInterval(timer);
     } else if (label === 'Total Visits') {
       let current = 0;
-      const target = 1000000;
+      const target = 2000000;
       const duration = 1500;
       const steps = 50;
       const increment = target / steps;
@@ -63,7 +63,7 @@ function StatCard({ icon, value, label, delay }: StatCardProps) {
       const timer = setInterval(() => {
         current += increment;
         if (current >= target) {
-          setDisplayValue('1M+');
+          setDisplayValue('2M+');
           clearInterval(timer);
         } else {
           setDisplayValue(Math.floor(current / 1000) + 'K');
@@ -71,9 +71,9 @@ function StatCard({ icon, value, label, delay }: StatCardProps) {
       }, stepDuration);
 
       return () => clearInterval(timer);
-    } else if (label === 'Combined Experience') {
+    } else if (label === 'Experience') {
       let current = 0;
-      const target = 8;
+      const target = 4;
       const increment = 1;
       const duration = 1200;
       const steps = target / increment;

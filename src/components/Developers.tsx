@@ -25,7 +25,7 @@ function Developers() {
                 <p className="text-gray-400 text-sm mt-1">Developer of Campfire Labs</p>
               </div>
             </div>
-            <p className="text-gray-300 mb-6 relative z-10 font-medium">3 years of experience</p>
+            <p className="text-gray-300 mb-6 relative z-10 font-medium">4 years of experience</p>
             <ul className="space-y-2 text-gray-400 relative z-10">
               <li className="flex items-center gap-2">
                 <span className="w-2 h-2 bg-yellow-400 rounded-full" />

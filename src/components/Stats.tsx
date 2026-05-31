@@ -1,14 +1,40 @@
 import { useEffect, useState, useRef } from 'react';
 import { Gamepad2, Eye, Clock } from 'lucide-react';
 
+// ============================================================
+// EDIT YOUR STATS HERE
+// ============================================================
+const STATS = {
+  games: {
+    count: 10,          // Number of games
+    label: 'Games Made',
+  },
+  visits: {
+    count: 2000000,     // Total visits (number)
+    label: 'Total Visits',
+  },
+  experience: {
+    years: 4,           // Years of experience
+    label: 'Experience',
+  },
+};
+// ============================================================
+
 interface StatCardProps {
   icon: React.ReactNode;
-  value: string;
   label: string;
   delay: number;
+  animateTo: number;
+  type: 'count' | 'visits' | 'years';
 }
 
-function StatCard({ icon, value, label, delay }: StatCardProps) {
+function formatVisits(n: number): string {
+  if (n >= 1000000) return (n / 1000000).toFixed(1) + 'M';
+  if (n >= 1000) return Math.floor(n / 1000) + 'K';
+  return n.toString();
+}
+
+function StatCard({ icon, label, delay, animateTo, type }: StatCardProps) {
   const [isVisible, setIsVisible] = useState(false);
   const [displayValue, setDisplayValue] = useState('0');
   const ref = useRef<HTMLDivElement>(null);
@@ -23,75 +49,35 @@ function StatCard({ icon, value, label, delay }: StatCardProps) {
       { threshold: 0.1 }
     );
 
-    if (ref.current) {
-      observer.observe(ref.current);
-    }
-
+    if (ref.current) observer.observe(ref.current);
     return () => observer.disconnect();
   }, [delay]);
 
   useEffect(() => {
     if (!isVisible) return;
 
-    if (label === 'Games Made') {
-      let current = 0;
-      const target = 10;
-      const increment = 1;
-      const duration = 1200;
-      const steps = target / increment;
-      const stepDuration = duration / steps;
+    const duration = 1400;
+    const steps = type === 'visits' ? 50 : animateTo;
+    const increment = animateTo / steps;
+    const stepDuration = duration / steps;
+    let current = 0;
 
-      const timer = setInterval(() => {
-        current += increment;
-        if (current >= target) {
-          setDisplayValue('10+');
-          clearInterval(timer);
-        } else {
-          setDisplayValue(current.toString());
-        }
-      }, stepDuration);
+    const timer = setInterval(() => {
+      current += increment;
+      if (current >= animateTo) {
+        if (type === 'visits') setDisplayValue(formatVisits(animateTo) + '+');
+        else if (type === 'years') setDisplayValue(animateTo + ' Years');
+        else setDisplayValue(animateTo + '+');
+        clearInterval(timer);
+      } else {
+        if (type === 'visits') setDisplayValue(formatVisits(Math.floor(current)));
+        else if (type === 'years') setDisplayValue(Math.floor(current) + ' Years');
+        else setDisplayValue(Math.floor(current).toString());
+      }
+    }, stepDuration);
 
-      return () => clearInterval(timer);
-    } else if (label === 'Total Visits') {
-      let current = 0;
-      const target = 2000000;
-      const duration = 1500;
-      const steps = 50;
-      const increment = target / steps;
-      const stepDuration = duration / steps;
-
-      const timer = setInterval(() => {
-        current += increment;
-        if (current >= target) {
-          setDisplayValue('2M+');
-          clearInterval(timer);
-        } else {
-          setDisplayValue(Math.floor(current / 1000) + 'K');
-        }
-      }, stepDuration);
-
-      return () => clearInterval(timer);
-    } else if (label === 'Experience') {
-      let current = 0;
-      const target = 4;
-      const increment = 1;
-      const duration = 1200;
-      const steps = target / increment;
-      const stepDuration = duration / steps;
-
-      const timer = setInterval(() => {
-        current += increment;
-        if (current >= target) {
-          setDisplayValue(target + ' Years');
-          clearInterval(timer);
-        } else {
-          setDisplayValue(current + ' Years');
-        }
-      }, stepDuration);
-
-      return () => clearInterval(timer);
-    }
-  }, [isVisible, label]);
+    return () => clearInterval(timer);
+  }, [isVisible, animateTo, type]);
 
   return (
     <div
@@ -101,9 +87,7 @@ function StatCard({ icon, value, label, delay }: StatCardProps) {
       }`}
     >
       <div className="flex flex-col items-center text-center">
-        <div className="mb-4 text-yellow-400">
-          {icon}
-        </div>
+        <div className="mb-4 text-yellow-400">{icon}</div>
         <div className="text-4xl md:text-5xl font-bold text-yellow-400 mb-2">
           {displayValue}
         </div>
@@ -124,20 +108,23 @@ function Stats() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <StatCard
             icon={<Gamepad2 size={48} />}
-            value="10+"
-            label="Games Made"
+            label={STATS.games.label}
+            animateTo={STATS.games.count}
+            type="count"
             delay={0}
           />
           <StatCard
             icon={<Eye size={48} />}
-            value="2M+"
-            label="Total Visits"
+            label={STATS.visits.label}
+            animateTo={STATS.visits.count}
+            type="visits"
             delay={200}
           />
           <StatCard
             icon={<Clock size={48} />}
-            value="4 Years"
-            label="Experience"
+            label={STATS.experience.label}
+            animateTo={STATS.experience.years}
+            type="years"
             delay={400}
           />
         </div>

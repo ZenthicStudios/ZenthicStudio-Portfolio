@@ -130,14 +130,14 @@ function Stats() {
           />
           <StatCard
             icon={<Eye size={48} />}
-            value="1M+"
+            value="2M+"
             label="Total Visits"
             delay={200}
           />
           <StatCard
             icon={<Clock size={48} />}
-            value="5 Years"
-            label="Combined Experience"
+            value="4 Years"
+            label="Experience"
             delay={400}
           />
         </div>

@@ -7,7 +7,7 @@ const TEAM = [
   {
     name: 'Zenthic',
     role: 'Owner',
-    description: 'Developer of Campfire Labs',
+    description: 'Roblox Scripter',
     experience: '4 years of experience',
     skills: [
       'Simulator Development',

@@ -42,25 +42,25 @@ function Payment() {
           <PaymentMethod
             icon={<Banknote className="w-8 h-8 text-yellow-400" />}
             title="Bank Transfer"
-            range="$50 - $1,000+"
+            range="$350 - $1,000+"
             delay={0}
           />
           <PaymentMethod
             icon={<CreditCard className="w-8 h-8 text-yellow-400" />}
             title="Credit/Debit Card"
-            range="$50 - $1,000+"
+            range="$350 - ∞"
             delay={100}
           />
           <PaymentMethod
             icon={<Bitcoin className="w-8 h-8 text-yellow-400" />}
             title="Crypto (USDT)"
-            range="$50 - $1,000+"
+            range="$350 - ∞"
             delay={200}
           />
           <PaymentMethod
             icon={<Coins className="w-8 h-8 text-yellow-400" />}
             title="Robux"
-            range="15K - 300K+"
+            range="30K - ∞"
             delay={300}
           />
         </div>

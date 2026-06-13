@@ -33,7 +33,7 @@ function Contact() {
             </div>
             <div>
               <p className="text-sm text-indigo-200 mb-1 uppercase tracking-wide font-semibold">Discord</p>
-              <p className="text-2xl font-bold text-white">ZenthicDev</p>
+              <p className="text-2xl font-bold text-white">Zenthic06</p>
             </div>
           </a>
 

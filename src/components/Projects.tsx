@@ -197,6 +197,24 @@ const defaultProjects: Project[] = [
     project_link: 'https://www.roblox.com/games/101926178513156/Dont-Let-Brainrots-Break-The-Wall',
     youtube_link: '',
     order_index: 10
+  },
+  {
+    id: '11',
+    title: 'Merge a Animal',
+    description: '100% Solo Development - Plot claiming, in-game scaling cost, infinite gameplay, drop spawning, animal merging, and more',
+    image: 'https://tr.rbxcdn.com/180DAY-2c8f478fa1644853ee6d43a4703ec4c9/768/432/Image/Webp/noFilter',
+    project_link: 'https://www.roblox.com/games/77536284912732/Merge-a-Animal',
+    youtube_link: '',
+    order_index: 11
+  },
+  {
+    id: '12',
+    title: "Tag but you're a slime!",
+    description: '100% Solo Development - Slime mechanics, slime physics, faces, collision handlers, and more',
+    image: 'https://tr.rbxcdn.com/180DAY-b5ae0f48a76ae0ed10844c113d445e1a/768/432/Image/Webp/noFilter',
+    project_link: 'https://www.roblox.com/games/72533204819900/Tag-but-youre-a-slime',
+    youtube_link: '',
+    order_index: 12
   }
 ];
 

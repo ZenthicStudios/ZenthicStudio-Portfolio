@@ -42,7 +42,7 @@ function Payment() {
           <PaymentMethod
             icon={<Banknote className="w-8 h-8 text-yellow-400" />}
             title="Bank Transfer"
-            range="$350 - $1,000+"
+            range="$350 - ∞"
             delay={0}
           />
           <PaymentMethod

@@ -10,7 +10,7 @@ const STATS = {
     label: 'Games Made',
   },
   visits: {
-    count: 2000000,     // Total visits (number)
+    count: 3000000,     // Total visits (number)
     label: 'Total Visits',
   },
   experience: {
@@ -29,8 +29,8 @@ interface StatCardProps {
 }
 
 function formatVisits(n: number): string {
-  if (n >= 1000000) return (n / 1000000).toFixed(1) + 'M';
-  if (n >= 1000) return Math.floor(n / 1000) + 'K';
+  if (n >= 1000000) return Math.round(n / 1000000) + 'M';
+  if (n >= 1000) return Math.round(n / 1000) + 'K';
   return n.toString();
 }
 

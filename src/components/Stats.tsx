@@ -28,9 +28,13 @@ interface StatCardProps {
   type: 'count' | 'visits' | 'years';
 }
 
-function formatVisits(n: number): string {
-  if (n >= 1000000) return Math.round(n / 1000000) + 'M';
-  if (n >= 1000) return Math.round(n / 1000) + 'K';
+function formatVisits(n: number, isFinal: boolean): string {
+  if (n >= 1000000) {
+    return isFinal ? Math.round(n / 1000000) + 'M' : (n / 1000000).toFixed(1) + 'M';
+  }
+  if (n >= 1000) {
+    return isFinal ? Math.round(n / 1000) + 'K' : (n / 1000).toFixed(1) + 'K';
+  }
   return n.toString();
 }
 
@@ -65,12 +69,12 @@ function StatCard({ icon, label, delay, animateTo, type }: StatCardProps) {
     const timer = setInterval(() => {
       current += increment;
       if (current >= animateTo) {
-        if (type === 'visits') setDisplayValue(formatVisits(animateTo) + '+');
+        if (type === 'visits') setDisplayValue(formatVisits(animateTo, true) + '+');
         else if (type === 'years') setDisplayValue(animateTo + ' Years');
         else setDisplayValue(animateTo + '+');
         clearInterval(timer);
       } else {
-        if (type === 'visits') setDisplayValue(formatVisits(Math.floor(current)));
+        if (type === 'visits') setDisplayValue(formatVisits(Math.floor(current), false));
         else if (type === 'years') setDisplayValue(Math.floor(current) + ' Years');
         else setDisplayValue(Math.floor(current).toString());
       }

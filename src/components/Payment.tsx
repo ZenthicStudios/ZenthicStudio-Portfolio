@@ -60,7 +60,7 @@ function Payment() {
           <PaymentMethod
             icon={<Coins className="w-8 h-8 text-yellow-400" />}
             title="Robux"
-            range="30K - ∞"
+            range="100K - ∞"
             delay={300}
           />
         </div>

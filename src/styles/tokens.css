@@ -1,0 +1,94 @@
+:root {
+  color-scheme: dark;
+  --bg: #070707;
+  --bg-deep: #050505;
+  --surface: #0b0b0b;
+  --surface-raised: #141111;
+  --text: #f6f3f2;
+  --muted: #aaa3a3;
+  --faint: #8d8585;
+  --red: #ff2a2a;
+  --red-light: #ff6262;
+  --crimson: #b30000;
+  --red-deep: #3d0000;
+  --line: #ffffff18;
+  --red-line: #ff2a2a50;
+  --glass: #0b0b0be8;
+  --overlay: #050505b3;
+  --gradient-red: linear-gradient(
+    120deg,
+    var(--red),
+    var(--crimson) 65%,
+    var(--red-deep)
+  );
+  --gradient-text: linear-gradient(
+    115deg,
+    var(--red-light),
+    var(--red) 55%,
+    var(--crimson)
+  );
+  --gradient-border: linear-gradient(
+    135deg,
+    var(--red-line),
+    var(--line) 45%,
+    var(--red-deep)
+  );
+  --gradient-glow: radial-gradient(
+    ellipse,
+    #ff2a2a20,
+    #b3000010 40%,
+    transparent 70%
+  );
+  --gradient-card: linear-gradient(150deg, #3d000020, var(--surface) 65%);
+  --gradient-shade: linear-gradient(0deg, var(--bg), transparent 65%);
+  --gradient-grid:
+    linear-gradient(#ff2a2a08 1px, transparent 1px),
+    linear-gradient(90deg, #ff2a2a08 1px, transparent 1px);
+  --gradient-shimmer: linear-gradient(
+    90deg,
+    transparent,
+    #ff2a2a25,
+    transparent
+  );
+  --shadow-red: 0 0 80px #ff2a2a15;
+  --shadow-card: 0 25px 60px #05050570;
+  --shadow-orbit: 0 0 60px #ff2a2a18, inset 0 0 50px #b3000010;
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-pill: 999px;
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
+  --space-24: 6rem;
+  --page-padding: clamp(1.25rem, 5.4vw, 8rem);
+  --section-space: clamp(4.5rem, 8vw, 8.5rem);
+  --page-width: 1680px;
+  --font-display: "Space Grotesk Variable", sans-serif;
+  --font-body: "Manrope Variable", sans-serif;
+  --text-xs: 0.6875rem;
+  --text-sm: 0.8125rem;
+  --text-base: 0.9375rem;
+  --text-lg: 1.0625rem;
+  --heading-xl: clamp(3.45rem, 7.8vw, 8.5rem);
+  --heading-lg: clamp(2.25rem, 4.3vw, 4.75rem);
+  --heading-md: clamp(1.4rem, 2vw, 2rem);
+  --duration-fast: 180ms;
+  --duration-normal: 350ms;
+  --duration-slow: 650ms;
+  --duration-pulse: 2.8s;
+  --duration-orbit: 24s;
+  --duration-marquee: 36s;
+  --ease: cubic-bezier(0.2, 0.7, 0.2, 1);
+  --grid-size: 64px;
+  --navbar-height: 88px;
+  --icon-size: 19px;
+}

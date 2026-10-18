@@ -1,18 +1,28 @@
-function Footer() {
+import { ArrowUp } from "lucide-react";
+import { site } from "../data/site";
+export default function Footer() {
   return (
-    <footer className="py-12 px-4 border-t border-yellow-500/20 bg-gray-900/50 backdrop-blur-sm">
-      <div className="max-w-6xl mx-auto">
-        <div className="text-center space-y-4">
-          <p className="text-gray-400 text-sm">
-            © 2025 Zenthic Studio. All rights reserved.
-          </p>
-          <p className="text-gray-500 text-xs">
-            Crafting exceptional Roblox experiences
-          </p>
-        </div>
+    <footer className="footer">
+      <div className="footer-top">
+        <a href="#home" className="brand">
+          <span className="brand-mark">{site.monogram}</span>
+          <span>
+            {site.shortName}
+            <small>{site.wordmarkSuffix}</small>
+          </span>
+        </a>
+        <p>{site.footer.tagline}</p>
+        <a className="back-top" href="#home">
+          {site.footer.top}
+          <ArrowUp aria-hidden="true" />
+        </a>
+      </div>
+      <div className="footer-bottom">
+        <span>
+          © {new Date().getFullYear()} {site.name}. {site.footer.rights}
+        </span>
+        <span>{site.footer.credit}</span>
       </div>
     </footer>
   );
 }
-
-export default Footer;

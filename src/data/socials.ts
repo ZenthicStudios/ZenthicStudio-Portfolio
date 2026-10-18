@@ -2,8 +2,8 @@ export const socials = [
   {
     id: "discord",
     label: "Discord",
-    value: "Zenthic06",
-    href: "https://discord.gg/CZa8HPhxcA",
+    value: "Zenthic Studios",
+    href: "https://discord.gg/FfnvmnMEM2",
     external: true,
   },
   {

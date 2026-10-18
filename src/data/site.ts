@@ -1,5 +1,5 @@
 import type { Testimonial } from "./types.ts";
-const scriptingYears = 3;
+const scriptingYears = 4;
 export const site = {
   name: "Zenthic Studios",
   shortName: "ZENTHIC",
@@ -10,7 +10,7 @@ export const site = {
     "Roblox games built from scratch by Zenthic06. Clean, modular scripting, complete game development and separately scoped UI, building and animation work.",
   title: "Zenthic Studios",
   description:
-    `Zenthic06, independent Roblox developer with around ${scriptingYears} years of scripting experience. From individual systems to complete games built solo, ready for launch. Open for commissions.`,
+    `Zenthic06, independent Roblox developer with ${scriptingYears} years of experience. Custom systems and complete games built from scratch. Open for commissions.`,
   navLabel: "Main navigation",
   menuOpen: "Open menu",
   menuClose: "Close menu",
@@ -30,7 +30,7 @@ export const site = {
     eyebrow: "INDEPENDENT ROBLOX DEVELOPER",
     lines: ["YOUR NEXT", "OBSESSION.", "BUILT HERE."],
     description:
-      `Hey, I’m Zenthic. I turn ideas into complete Roblox games, built solo from scratch. Around ${scriptingYears} years of scripting experience, with clean, modular code at the core of everything I make.`,
+      `I’m Zenthic, a Roblox developer with ${scriptingYears} years of experience. I build complete games from scratch with clean, modular code.`,
     original:
       "From a single gameplay system to a complete Roblox game, with scope, assets and launch requirements agreed before development begins.",
     stamp: "SOLO DEV. FULL COMMITMENT.",
@@ -130,7 +130,7 @@ export const site = {
   developer: {
     name: "Zenthic",
     role: "Solo Roblox Developer · Scripting Specialist",
-    experience: `Around ${scriptingYears} years of scripting`,
+    experience: `${scriptingYears} years of experience`,
   },
   services: [
     {
@@ -197,7 +197,7 @@ export const site = {
     eyebrow: "HAVE SOMETHING IN MIND?",
     headline: "LET’S BUILD\nWHAT’S NEXT.",
     description:
-      "Hire me for a system or a complete game. Share your idea, budget, timeline and the assets you already have. My Discord is the place for private commission enquiries and a little community conversation.",
+      "Hire me for a system or a complete game. Send me a Discord DM or open a private commission ticket in my server. Share your idea, budget, timeline and the assets you already have.",
     discordCta: "Discuss a commission",
     emailCta: "Send an email",
   },

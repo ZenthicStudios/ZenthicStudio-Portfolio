@@ -6,10 +6,10 @@ export const site = {
   monogram: "Z",
   socialImage: "/og-image.png",
   socialDescription:
-    "Roblox scripting by Zenthic06. Clean, modular systems and full game scripting, backed by around 3 years of commission experience.",
+    "Roblox games built from scratch by Zenthic06. Clean, modular scripting, complete game development and separately scoped UI, building and animation work.",
   title: "Zenthic Studios — Roblox Developer & Freelance Scripter",
   description:
-    "Zenthic06, Roblox developer and freelance scripter with around 3 years of experience. Explore my work, from modular gameplay systems to full game scripting. Open for commissions.",
+    "Zenthic06, independent Roblox developer with around 3 years of scripting experience. From individual systems to complete games built solo, ready for launch. Open for commissions.",
   navLabel: "Main navigation",
   menuOpen: "Open menu",
   menuClose: "Close menu",
@@ -29,9 +29,9 @@ export const site = {
     eyebrow: "INDEPENDENT ROBLOX DEVELOPER",
     lines: ["YOUR NEXT", "OBSESSION.", "BUILT HERE."],
     description:
-      "Hey, I’m Zenthic. I’ve been scripting on Roblox for around 3 years, building games and systems from scratch. Clean, modular code that’s easy to work with and expand.",
+      "Hey, I’m Zenthic. I turn ideas into complete Roblox games, built solo from scratch. Around 3 years of scripting experience, with clean, modular code at the core of everything I make.",
     original:
-      "Roblox scripting for individual systems and full games, with clean, modular code and a clear commission process.",
+      "From a single gameplay system to a complete Roblox game, with scope, assets and launch requirements agreed before development begins.",
     stamp: "SOLO DEV. FULL COMMITMENT.",
     caption: "CODE. CREATE. CAPTIVATE.",
     scroll: "SCROLL TO EXPLORE",
@@ -62,9 +62,9 @@ export const site = {
     services: {
       number: "04",
       eyebrow: "WHAT I BRING",
-      title: "Roblox scripting.\nBuilt around your game.",
+      title: "One developer.\nFrom idea to launch.",
       description:
-        "From an individual system to full game scripting. Code that fits your project and leaves room to expand.",
+        "Scripting is my strongest skill. I also bring the other pieces together to build complete Roblox experiences, from simulators and tycoons to other game genres.",
     },
     process: {
       number: "05",
@@ -78,7 +78,7 @@ export const site = {
       eyebrow: "LET’S MAKE IT HAPPEN",
       title: "Big ideas. Clear starting points.",
       description:
-        "Flexible payment methods to suit your needs. Every project starts with a conversation.",
+        "Scripting with supplied assets or a complete game built from scratch: we agree exactly what is included before I quote. UI, building, modeling, rigging and animation add to the scope and cost.",
     },
     testimonials: {
       number: "07",
@@ -130,7 +130,7 @@ export const site = {
   },
   developer: {
     name: "Zenthic",
-    role: "Owner · Roblox Scripter",
+    role: "Solo Roblox Developer · Scripting Specialist",
     experience: "Around 3 years of scripting",
   },
   services: [
@@ -143,21 +143,21 @@ export const site = {
     },
     {
       id: "02",
-      name: "Full game scripting",
+      name: "Complete game development",
       description:
-        "Building and connecting a game’s systems from scratch, from progression and core loops to the logic that brings it all together.",
+        "A complete game built solo from scratch: core loops, progression, interfaces and the pieces needed for launch. Simulators, tycoons and other genres, shaped around your idea and agreed scope.",
       tags: [
         "Simulator Development",
         "Tycoon Frameworks",
-        "Full Game Scripting",
+        "Solo Game Development",
       ],
     },
     {
       id: "03",
-      name: "Interface & polish",
+      name: "UI, assets & final polish",
       description:
-        "Responsive interfaces, connected gameplay logic and performance improvements for a smoother player experience.",
-      tags: ["UI/UX Design", "Performance", "Responsive Interfaces"],
+        "I can create UI, build environments, rig and animate, and handle basic modeling. Scripting remains my specialty; I’ll be clear about asset complexity before we agree the work. These services cost extra beyond scripting with assets supplied.",
+      tags: ["UI & Building", "Basic Modeling", "Rigging & Animation"],
     },
   ],
   skills: [
@@ -165,6 +165,8 @@ export const site = {
     "ROBLOX STUDIO",
     "GAMEPLAY SYSTEMS",
     "UI / UX",
+    "BUILDING",
+    "RIGGING & ANIMATION",
     "SIMULATORS",
     "TYCOON FRAMEWORKS",
     "OPTIMIZATION",
@@ -178,17 +180,17 @@ export const site = {
     {
       title: "The agreement",
       description:
-        "We agree the scope, timeline, quote and payment structure: per system, milestones, tasks or another arrangement. For payment on completion, we settle fair terms for both sides first.",
+        "We agree deliverables, who supplies each asset, timeline, quote and payment structure. UI and asset production are quoted separately from scripting-only work. If payment is on completion, we settle fair terms for both sides first.",
     },
     {
       title: "The build",
       description:
-        "I build the agreed systems in clean, modular code, share progress and work through feedback with you.",
+        "I build the agreed systems and any included UI or assets, share progress and work through feedback with you. Clean, modular scripting keeps the game straightforward to expand.",
     },
     {
       title: "The final polish",
       description:
-        "We review the finished work, test the experience and prepare the agreed handoff.",
+        "We test the agreed gameplay, review the final details and prepare the handoff. For complete games, that includes the launch preparation we agreed in the scope.",
     },
   ],
   testimonials: [] as Testimonial[],
@@ -196,12 +198,12 @@ export const site = {
     eyebrow: "HAVE SOMETHING IN MIND?",
     headline: "LET’S BUILD\nWHAT’S NEXT.",
     description:
-      "Tell me what you need built, your budget and your timeline. Take a look through my work, or ask for system examples relevant to your project.",
-    discordCta: "Join our Discord",
+      "Hire me for a system or a complete game. Share your idea, budget, timeline and the assets you already have. My Discord is the place for private commission enquiries and a little community conversation.",
+    discordCta: "Discuss a commission",
     emailCta: "Send an email",
   },
   footer: {
-    tagline: "Clean Roblox scripting. Built to grow with your game.",
+    tagline: "Your idea. My craft. A Roblox game ready to play.",
     rights: "All rights reserved.",
     top: "Back to top",
     credit: "INDEPENDENT BY DESIGN.",

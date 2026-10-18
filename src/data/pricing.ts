@@ -2,7 +2,7 @@ import type { PaymentPlan } from "./types";
 export const pricing = {
   starting: "Starting from",
   cta: "Start a project",
-  terms: "Minimum project price. No maximum. Final quotes scale with scope.",
+  terms: "Minimum project budget, not a fixed full-game price. No upper cap. UI and asset creation are quoted in addition to scripting with supplied assets.",
   paymentLabel: "How payment works",
   selector: "Payment method",
   plans: [
@@ -57,6 +57,7 @@ export const pricing = {
       name: "Robux",
       currency: "R$",
       amount: 99999,
+      amountLabel: "99.999k",
       prefix: "",
       suffix: " R$",
       subtitle: "Built for the Roblox ecosystem.",

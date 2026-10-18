@@ -17,7 +17,7 @@ All 13 game IDs and stable slugs are preserved, and all artwork has a local WebP
 
 ## Pricing and payment
 
-Edit `src/data/pricing.ts`. It owns amounts, symbols, labels, notes, optional payment links/emails, and the payment-detail placeholders. USD starts at $349; Robux starts at 99,999 R$. Neither has a ceiling.
+Edit `src/data/pricing.ts`. It owns amounts, symbols, labels, notes, optional payment links/emails, and the payment-detail placeholders. USD starts at $349; Robux starts at 99,999 R$, displayed as **99.999k R$** through the optional `amountLabel`. Neither has a ceiling.
 
 Still to provide:
 
@@ -30,7 +30,7 @@ Credit/Debit Card, Bank Transfer and Crypto are also listed, each with a $349 US
 
 `src/data/site.ts` owns section text, navigation, service descriptions, process steps, SEO metadata and testimonials. Testimonials remain hidden while the array is empty. Add real quotes only.
 
-The biography reflects around three years of Roblox scripting, clean modular code, individual systems and full game scripting. Most portfolio work is described as 80–100% scripted by Zenthic, with other system examples available on request. The commission process covers the client's Roblox identity, studio/team, prior games, scope, timing and agreed payment structure.
+The biography reflects around three years of Roblox scripting and complete games built solo from scratch. Scripting is the specialty; UI, building, rigging, animation and basic modeling are additional scoped services. Be explicit that these add cost beyond scripting with supplied assets, and that a starting budget is not a fixed price for an entire game. Most portfolio work remains described as 80–100% scripted by Zenthic; do not reinterpret that as ownership of every asset. The commission process covers Roblox identity, studio/team, prior games, scope, asset responsibilities, timing and agreed payment structure. The Discord is for hiring Zenthic, with casual general chat; it is not a developer hiring marketplace or a free support service.
 
 `src/data/socials.ts` owns Discord, ZenthicStudios@gmail.com and the Zenthic06 Roblox profile (user 5005008636). The no-JavaScript contact text in `index.html` matches the email.
 

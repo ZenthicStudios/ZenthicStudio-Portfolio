@@ -53,7 +53,7 @@ The biography and statistics use the owner's updated four years of experience. S
 
 The browser and social-preview title is exactly **Zenthic Studios**. `src/data/site.ts` owns one `scriptingYears = 4` value used by the metadata description, hero copy, developer badge and statistics. Hero, Services, Stats and the Vite metadata plugin consume these existing fields. The obsolete previous-portfolio statistics disclosure, its data field and unused CSS were removed. No API, payment contract, animation or data lifecycle changed.
 
-`PaymentPlan.amountLabel?: string` is an additive display-only label consumed by `Payment.tsx`. The Robux plan keeps the numeric amount 99999 and displays **99.999k R$**. USD amounts remain 349. No checkout, payment contract, API or persistent data changed. Hero, Services, Process, Payment, Contact, Chrome and Vite metadata consumers were checked; only Payment needed a rendering change for the optional label.
+Payment formats numeric amounts directly with the existing en-US locale: Robux displays **99,999 R$**, and USD amounts remain 349. The unused amountLabel field and rendering branch were removed. Pricing and Payment were the only consumers of that optional field; payment amounts, checkout behavior and API contracts did not change.
 
 Requested publishing workflow: edit this existing `ZenthicStudios/ZenthicStudio-Portfolio` repository on `main` and commit directly to that branch. Vercel handles the resulting Git integration build. Do not create another repository, branch, PR, project or manual deployment for ordinary portfolio edits.
 
@@ -66,3 +66,5 @@ Latest polish verification: production build, lint and seven existing tests pass
 Copy verification on 2026-10-18: build, lint and all seven existing tests passed. Browser checks passed at 360–3840px with no overflow or page errors; 20 filter cycles retained the same cards with zero nodes added/removed. Updated desktop service copy and mobile commission-process screenshots were inspected. No runtime/API contract, payment amount, game identity or component lifecycle changed.
 
 Discord direct contact: the owner confirmed @Zenthic06. The Discord User entry links to profile 1373741701977342015; Discord Server labels the separate invite. Contact copy uses concise commission terminology. Contact renders both links through its existing list. ErrorBoundary still reads the unchanged email entry at index 1. Hero and Services display the concise shared experience badge; Stats and metadata use the same four-year value. No API or persistent data changed.
+
+Genre separation: site.genres owns the Game genres title, Tycoon and Simulator labels and enquiry text. Services renders this static block separately from service capabilities and the skills strip. Removed genre labels from skills and service tags, including Tycoon Frameworks. Existing animations and interactions are unchanged; no new listeners or repeated work were added.

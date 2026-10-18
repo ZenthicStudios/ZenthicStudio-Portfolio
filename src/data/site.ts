@@ -65,7 +65,7 @@ export const site = {
       eyebrow: "WHAT I BRING",
       title: "One developer.\nFrom idea to launch.",
       description:
-        "Scripting is my strongest skill. I also bring the other pieces together to build complete Roblox experiences, from simulators and tycoons to other game genres.",
+        "Specializing in Roblox scripting, with UI design, building and asset production available for complete game projects.",
     },
     process: {
       number: "05",
@@ -144,12 +144,8 @@ export const site = {
       id: "02",
       name: "Complete game development",
       description:
-        "A complete game built solo from scratch: core loops, progression, interfaces and the pieces needed for launch. Simulators, tycoons and other genres, shaped around your idea and agreed scope.",
-      tags: [
-        "Simulator Development",
-        "Tycoon Frameworks",
-        "Solo Game Development",
-      ],
+        "Complete Roblox games built from scratch, from gameplay and progression to interfaces, testing and launch preparation.",
+      tags: ["Game Design", "Progression Systems", "Launch Preparation"],
     },
     {
       id: "03",
@@ -166,10 +162,14 @@ export const site = {
     "UI / UX",
     "BUILDING",
     "RIGGING & ANIMATION",
-    "SIMULATORS",
-    "TYCOON FRAMEWORKS",
+    "BASIC MODELING",
     "OPTIMIZATION",
   ],
+  genres: {
+    title: "Game genres",
+    items: ["Tycoon", "Simulator"],
+    description: "Have another genre in mind? Get in touch to discuss your project.",
+  },
   process: [
     {
       title: "The conversation",

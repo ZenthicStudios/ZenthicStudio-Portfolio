@@ -48,7 +48,6 @@ export interface PaymentPlan {
   name: string;
   currency: string;
   amount: number;
-  amountLabel?: string;
   prefix: string;
   suffix: string;
   subtitle: string;

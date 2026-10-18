@@ -991,6 +991,13 @@ main,
   font-size: 10px;
   color: var(--muted);
 }
+.game-genres {
+  margin-top: var(--space-10);
+}
+.game-genres p {
+  margin-top: var(--space-4);
+  font-size: var(--text-sm);
+}
 .marquee {
   margin-top: var(--space-16);
   overflow: hidden;

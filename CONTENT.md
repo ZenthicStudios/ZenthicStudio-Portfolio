@@ -17,7 +17,7 @@ All 13 game IDs and stable slugs are preserved, and all artwork has a local WebP
 
 ## Pricing and payment
 
-Edit `src/data/pricing.ts`. It owns amounts, symbols, labels, notes, optional payment links/emails, and the payment-detail placeholders. USD starts at $349; Robux starts at 99,999 R$, displayed as **99.999k R$** through the optional `amountLabel`. Neither has a ceiling.
+Edit `src/data/pricing.ts`. It owns amounts, symbols, labels, notes, optional payment links/emails, and the payment-detail placeholders. USD starts at $349; Robux starts at **99,999 R$**, formatted directly from its numeric amount. Neither has a ceiling.
 
 Still to provide:
 
@@ -55,3 +55,5 @@ Use Node 22.12+ (Node 24 is suitable for Vercel). Run `npm ci`, then `npm run de
 `npm run build` checks browser and server TypeScript and creates a static `dist/`. `npm test` checks the stats service; `npm run lint` checks the source. Vercel deploys the static frontend plus the one function under `api/`. No SSR, ISR or Vercel image optimization is used. Vercel's production hostname environment variable supplies the canonical URL and absolute social-image URL at build time.
 
 The server dependency chain uses `.js` import specifiers even in TypeScript source: Vercel emits `.js` files and Node resolves those exact names. Root `tsconfig.json` supplies NodeNext settings because Vercel does not follow TypeScript project references. The browser retains its own bundler configuration. `tests/runtime.test.ts` compiles and invokes the API in plain Node to catch startup errors hidden by Vite/tsx.
+
+Game genres are separate from technical skills: the Game genres block lists Tycoon and Simulator. Service tags and the skills strip contain capabilities and tools only; do not label genres as frameworks.

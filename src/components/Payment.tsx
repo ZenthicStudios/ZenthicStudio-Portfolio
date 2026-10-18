@@ -43,9 +43,7 @@ export default function Payment() {
               <span>{pricing.starting}</span>
               <strong>
                 {plan.prefix}
-                {"amountLabel" in plan
-                  ? plan.amountLabel
-                  : plan.amount.toLocaleString(formats.locale)}
+                {plan.amount.toLocaleString(formats.locale)}
                 <small>{plan.suffix}</small>
               </strong>
             </div>

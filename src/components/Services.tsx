@@ -41,6 +41,15 @@ export default function Services() {
           );
         })}
       </div>
+      <div className="game-genres" aria-labelledby="game-genres-heading">
+        <h3 id="game-genres-heading">{site.genres.title}</h3>
+        <div className="skill-tags">
+          {site.genres.items.map((genre) => (
+            <span key={genre}>{genre}</span>
+          ))}
+        </div>
+        <p>{site.genres.description}</p>
+      </div>
       <div ref={ref} className={`marquee ${visible ? "in-view" : ""}`}>
         <div className="marquee-track">
           {[false, true].map((copy) => (

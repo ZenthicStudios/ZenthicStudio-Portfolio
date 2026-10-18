@@ -80,10 +80,6 @@ export default function Stats() {
       {failed && data?.updatedAt && (
         <p className="stats-note">{site.stats.cached}</p>
       )}
-      <details className="historical-note">
-        <summary>{site.stats.historical.split(".")[0]}.</summary>
-        <p>{site.stats.historical}</p>
-      </details>
     </section>
   );
 }

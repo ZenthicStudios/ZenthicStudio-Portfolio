@@ -1,4 +1,5 @@
 import type { Testimonial } from "./types.ts";
+const scriptingYears = 3;
 export const site = {
   name: "Zenthic Studios",
   shortName: "ZENTHIC",
@@ -7,9 +8,9 @@ export const site = {
   socialImage: "/og-image.png",
   socialDescription:
     "Roblox games built from scratch by Zenthic06. Clean, modular scripting, complete game development and separately scoped UI, building and animation work.",
-  title: "Zenthic Studios — Roblox Developer & Freelance Scripter",
+  title: "Zenthic Studios",
   description:
-    "Zenthic06, independent Roblox developer with around 3 years of scripting experience. From individual systems to complete games built solo, ready for launch. Open for commissions.",
+    `Zenthic06, independent Roblox developer with around ${scriptingYears} years of scripting experience. From individual systems to complete games built solo, ready for launch. Open for commissions.`,
   navLabel: "Main navigation",
   menuOpen: "Open menu",
   menuClose: "Close menu",
@@ -29,7 +30,7 @@ export const site = {
     eyebrow: "INDEPENDENT ROBLOX DEVELOPER",
     lines: ["YOUR NEXT", "OBSESSION.", "BUILT HERE."],
     description:
-      "Hey, I’m Zenthic. I turn ideas into complete Roblox games, built solo from scratch. Around 3 years of scripting experience, with clean, modular code at the core of everything I make.",
+      `Hey, I’m Zenthic. I turn ideas into complete Roblox games, built solo from scratch. Around ${scriptingYears} years of scripting experience, with clean, modular code at the core of everything I make.`,
     original:
       "From a single gameplay system to a complete Roblox game, with scope, assets and launch requirements agreed before development begins.",
     stamp: "SOLO DEV. FULL COMMITMENT.",
@@ -92,7 +93,7 @@ export const site = {
     playing: "PLAYING NOW",
     projects: "PROJECTS IN PORTFOLIO",
     experience: "YEARS OF EXPERIENCE",
-    years: 3,
+    years: scriptingYears,
     live: "LIVE",
     stale: "CACHED",
     offline: "OFFLINE",
@@ -103,8 +104,6 @@ export const site = {
     cached: "Showing the last successful update.",
     pending: "Connecting to Roblox…",
     refresh: "Refresh stats",
-    historical:
-      "The previous portfolio reported 10+ games and 3M+ visits. Live totals above cover the games listed here.",
   },
   projects: {
     all: "All work",
@@ -131,7 +130,7 @@ export const site = {
   developer: {
     name: "Zenthic",
     role: "Solo Roblox Developer · Scripting Specialist",
-    experience: "Around 3 years of scripting",
+    experience: `Around ${scriptingYears} years of scripting`,
   },
   services: [
     {

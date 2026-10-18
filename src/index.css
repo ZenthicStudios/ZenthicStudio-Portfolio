@@ -648,17 +648,10 @@ main,
 .counter {
   font-variant-numeric: tabular-nums;
 }
-.stats-note,
-.historical-note {
+.stats-note {
   font-size: var(--text-xs);
   color: var(--faint);
   margin-top: var(--space-6);
-}
-.historical-note summary {
-  cursor: pointer;
-}
-.historical-note p {
-  padding-top: var(--space-3);
 }
 .skeleton {
   position: relative;

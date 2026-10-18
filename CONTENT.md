@@ -13,7 +13,7 @@ Add one object to `src/data/projects.ts`, with `name`, a unique permanent `slug`
 - `src/data/games.ts` automatically includes projects with a game ID. Its `additionalGames` array can also add live games without a portfolio card.
 - Rankings, top games, the portfolio count and filters update automatically. No manual rank field is needed.
 
-The 13 existing projects retain their names, contribution descriptions and Roblox links. All 13 game IDs have been resolved and all artwork has a local WebP copy. Some Roblox experience names have changed; the original portfolio names remain the editorial titles.
+All 13 game IDs and stable slugs are preserved, and all artwork has a local WebP copy. Contribution labels describe scripting rather than every discipline involved in making a game. Tsunami Runners uses the owner's supplied current title and link while retaining its original internal slug and artwork fallbacks.
 
 ## Pricing and payment
 
@@ -29,6 +29,8 @@ Credit/Debit Card, Bank Transfer and Crypto are also listed, each with a $349 US
 ## Copy, social links and testimonials
 
 `src/data/site.ts` owns section text, navigation, service descriptions, process steps, SEO metadata and testimonials. Testimonials remain hidden while the array is empty. Add real quotes only.
+
+The biography reflects around three years of Roblox scripting, clean modular code, individual systems and full game scripting. Most portfolio work is described as 80–100% scripted by Zenthic, with other system examples available on request. The commission process covers the client's Roblox identity, studio/team, prior games, scope, timing and agreed payment structure.
 
 `src/data/socials.ts` owns Discord, ZenthicStudios@gmail.com and the Zenthic06 Roblox profile (user 5005008636). The no-JavaScript contact text in `index.html` matches the email.
 

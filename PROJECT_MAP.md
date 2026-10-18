@@ -46,3 +46,13 @@ Project filter changes hide/reuse existing keyed articles; sorting reorders stab
 ## Verification
 
 `npm run build`, `npm test`, `npm run lint`. Seven tests cover ranking, totals, 20-way deduplication, cached repeats, stale fallback/recovery, partial/malformed data, resolution/artwork cache reuse and duplicate identities. The plain-Node runtime regression verifies compiled module startup, methods, outage recovery and cache headers. Vercel's own builder reproduced missing `.ts` imports before the fix and returned real live data after switching server imports to `.js`. Browser QA and earlier Lighthouse results are recorded in TESTING.md.
+
+## Commission copy and publishing workflow
+
+The biography and statistics now use the owner's stated approximately three years of Roblox scripting. Site copy describes clean modular code, scripting contributions, full game scripting and the owner's client qualification/payment discussion process. Project tags and contribution labels refer to scripting; Tsunami Runners uses the supplied current title/link while keeping its permanent slug, IDs and images. All consumers in the ownership table retain their existing data shapes; dynamic tag filtering needs no component changes.
+
+Requested publishing workflow: edit this existing `ZenthicStudios/ZenthicStudio-Portfolio` repository on `main` and commit directly to that branch. Vercel handles the resulting Git integration build. Do not create another repository, branch, PR, project or manual deployment for ordinary portfolio edits.
+
+The new Discord server is being prepared separately in the local `../discord-setup/` project. Its token-entry helper and local resource state do not belong in this website or its GitHub repository. Keep the existing invite until the new server and hosted ticket privacy are verified, then update `src/data/socials.ts` and the no-JavaScript link in `index.html` together.
+
+Copy verification on 2026-10-18: build, lint and all seven existing tests passed. Browser checks passed at 360–3840px with no overflow or page errors; 20 filter cycles retained the same cards with zero nodes added/removed. Updated desktop service copy and mobile commission-process screenshots were inspected. No runtime/API contract, payment amount, game identity or component lifecycle changed.

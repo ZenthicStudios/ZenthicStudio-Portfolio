@@ -6,10 +6,10 @@ export const site = {
   monogram: "Z",
   socialImage: "/og-image.png",
   socialDescription:
-    "Your next obsession. Built here. Independent Roblox development, gameplay systems and polished UI/UX.",
+    "Roblox scripting by Zenthic06. Clean, modular systems and full game scripting, backed by around 3 years of commission experience.",
   title: "Zenthic Studios — Roblox Developer & Freelance Scripter",
   description:
-    "Independent Roblox developer and freelance scripter. Explore 13 projects, live game statistics, gameplay systems and polished UI/UX. Open for commissions.",
+    "Zenthic06, Roblox developer and freelance scripter with around 3 years of experience. Explore my work, from modular gameplay systems to full game scripting. Open for commissions.",
   navLabel: "Main navigation",
   menuOpen: "Open menu",
   menuClose: "Close menu",
@@ -29,9 +29,9 @@ export const site = {
     eyebrow: "INDEPENDENT ROBLOX DEVELOPER",
     lines: ["YOUR NEXT", "OBSESSION.", "BUILT HERE."],
     description:
-      "I turn ambitious ideas into Roblox experiences worth coming back to. From the first line of Luau to the final layer of polish.",
+      "Hey, I’m Zenthic. I’ve been scripting on Roblox for around 3 years, building games and systems from scratch. Clean, modular code that’s easy to work with and expand.",
     original:
-      "Crafting immersive Roblox experiences with advanced gameplay systems, polished UI/UX design, and optimized performance.",
+      "Roblox scripting for individual systems and full games, with clean, modular code and a clear commission process.",
     stamp: "SOLO DEV. FULL COMMITMENT.",
     caption: "CODE. CREATE. CAPTIVATE.",
     scroll: "SCROLL TO EXPLORE",
@@ -57,21 +57,21 @@ export const site = {
       eyebrow: "SELECTED WORK",
       title: "Ideas made playable.",
       description:
-        "Only projects where I contributed more than 80% of the work are listed here.",
+        "Most projects here are 80–100% scripted by me. I can also share relevant examples where I worked on specific systems.",
     },
     services: {
       number: "04",
       eyebrow: "WHAT I BRING",
-      title: "One developer.\nThe whole picture.",
+      title: "Roblox scripting.\nBuilt around your game.",
       description:
-        "From a focused gameplay system to a full-scale experience. Built with care, inside and out.",
+        "From an individual system to full game scripting. Code that fits your project and leaves room to expand.",
     },
     process: {
       number: "05",
       eyebrow: "FROM IDEA TO LAUNCH",
       title: "No guesswork.\nJust forward motion.",
       description:
-        "A clear path from your first message to a game you can put in players’ hands.",
+        "Scope, expectations and payment terms agreed before development begins.",
     },
     pricing: {
       number: "06",
@@ -92,7 +92,7 @@ export const site = {
     playing: "PLAYING NOW",
     projects: "PROJECTS IN PORTFOLIO",
     experience: "YEARS OF EXPERIENCE",
-    years: 4,
+    years: 3,
     live: "LIVE",
     stale: "CACHED",
     offline: "OFFLINE",
@@ -108,7 +108,7 @@ export const site = {
   },
   projects: {
     all: "All work",
-    solo: "Solo development",
+    solo: "Solo scripting",
     collaboration: "Collaborations",
     filterLabel: "Filter projects",
     sortLabel: "Sort projects",
@@ -125,38 +125,38 @@ export const site = {
     fallback: "PORTFOLIO ORDER · LIVE RANKING UNAVAILABLE",
     empty: "No projects match this filter.",
     other: "Other Projects",
-    otherEmpty: "No additional projects at this time",
+    otherEmpty: "Looking for a specific system? Ask me for relevant examples beyond the projects shown here.",
     countLabel: "projects",
   },
   developer: {
     name: "Zenthic",
     role: "Owner · Roblox Scripter",
-    experience: "4 years of experience",
+    experience: "Around 3 years of scripting",
   },
   services: [
     {
       id: "01",
       name: "Gameplay systems",
       description:
-        "Advanced gameplay mechanics that turn a good idea into something players want to master.",
+        "Custom gameplay systems built for your requirements, with clean Luau and modular code that’s straightforward to maintain.",
       tags: ["Gameplay Mechanics", "Luau", "Roblox Studio"],
     },
     {
       id: "02",
-      name: "Complete experiences",
+      name: "Full game scripting",
       description:
-        "Full-scale game development, from simulator progression to connected tycoon frameworks.",
+        "Building and connecting a game’s systems from scratch, from progression and core loops to the logic that brings it all together.",
       tags: [
         "Simulator Development",
         "Tycoon Frameworks",
-        "Full-Scale Game Development",
+        "Full Game Scripting",
       ],
     },
     {
       id: "03",
       name: "Interface & polish",
       description:
-        "Polished UI/UX design and optimized performance, so the experience feels as good as it plays.",
+        "Responsive interfaces, connected gameplay logic and performance improvements for a smoother player experience.",
       tags: ["UI/UX Design", "Performance", "Responsive Interfaces"],
     },
   ],
@@ -173,17 +173,17 @@ export const site = {
     {
       title: "The conversation",
       description:
-        "Tell me about your idea, your players and what success looks like. We define the scope together.",
+        "Share your project, Roblox username and any studio or team details. Links to games you’ve developed or published help me understand your background.",
     },
     {
-      title: "The blueprint",
+      title: "The agreement",
       description:
-        "We agree on the deliverables, timeline and quote before development begins.",
+        "We agree the scope, timeline, quote and payment structure: per system, milestones, tasks or another arrangement. For payment on completion, we settle fair terms for both sides first.",
     },
     {
       title: "The build",
       description:
-        "I develop the experience, share progress and refine the details with your feedback.",
+        "I build the agreed systems in clean, modular code, share progress and work through feedback with you.",
     },
     {
       title: "The final polish",
@@ -196,12 +196,12 @@ export const site = {
     eyebrow: "HAVE SOMETHING IN MIND?",
     headline: "LET’S BUILD\nWHAT’S NEXT.",
     description:
-      "Open for commissions & collaborations. Ready to bring your vision to life.",
+      "Tell me what you need built, your budget and your timeline. Take a look through my work, or ask for system examples relevant to your project.",
     discordCta: "Join our Discord",
     emailCta: "Send an email",
   },
   footer: {
-    tagline: "Crafting exceptional Roblox experiences.",
+    tagline: "Clean Roblox scripting. Built to grow with your game.",
     rights: "All rights reserved.",
     top: "Back to top",
     credit: "INDEPENDENT BY DESIGN.",

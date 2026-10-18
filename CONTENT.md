@@ -24,13 +24,13 @@ Still to provide:
 - PayPal payment link or email. The existing contact email is **not** assumed to be a PayPal account.
 - Robux transfer instructions and who covers any platform fees.
 
-Until those are provided, both buttons lead to the working Contact section. There is no payment processor or checkout, and no charge is made by this site.
+Credit/Debit Card, Bank Transfer and Crypto are also listed, each with a $349 USD minimum and no maximum. Card provider/link, bank instructions, and accepted crypto coins/networks are confirmed directly; no financial destinations are invented. Until payment details are supplied, all five buttons lead to the working Contact section. There is no payment processor or checkout, and no charge is made by this site.
 
 ## Copy, social links and testimonials
 
 `src/data/site.ts` owns section text, navigation, service descriptions, process steps, SEO metadata and testimonials. Testimonials remain hidden while the array is empty. Add real quotes only.
 
-`src/data/socials.ts` owns the existing Discord invite, username and contact email. The previous payment options remain mentioned as options to ask about; the two new plans replace the old price ranges.
+`src/data/socials.ts` owns Discord, ZenthicStudios@gmail.com and the Zenthic06 Roblox profile (user 5005008636). The no-JavaScript contact text in `index.html` matches the email.
 
 ## Change the theme
 
@@ -40,12 +40,16 @@ Until those are provided, both buttons lead to the working Contact section. Ther
 
 `src/data/config.ts` owns refresh frequency, timeouts, edge/stale durations, icon and place-ID cache durations, top-game count, ranking field and tie-breakers. Ranking happens only on the server. No browser request goes to the Roblox JSON APIs.
 
-The endpoint returns one cached snapshot to all three consumers. It requests all universes in one games-API batch, plus a separate icon batch only when artwork cache expires. Known universe IDs are committed in project config, avoiding repeated resolution across cold starts. New place-only IDs use a 30-day warm-instance resolution cache. Icons use a one-day warm-instance cache and a local fallback.
+The endpoint returns one shared snapshot to Hero, Stats, TopGames and Projects. It requests all universes in one games-API batch, plus one icon batch and one landscape-thumbnail batch when artwork caches expire. `server/artwork.ts` requests Roblox's default thumbnail with `defaults=true`, accepts completed official CDN URLs and caches successful images for one day per warm instance. Hero/gallery use the live landscape image; Top Games uses the live icon. Local images remain available if Roblox or the CDN fails. Known universe IDs avoid repeated resolution across cold starts; place-only IDs use a 30-day warm-instance resolution cache.
 
 Last-good snapshots survive upstream errors **inside a warm function instance**. Vercel's CDN also retains successful responses. This free-tier design does not claim durable cross-instance storage: a cold function with no prior success returns null totals and empty rankings, which display as “—” and portfolio order. No third-party cache or paid service is required.
+
+Healthy responses use the configured shared CDN cache header. Stale/empty failure responses and rejected methods use `no-store` so outages are not cached as fresh snapshots. Refresh errors produce a concise server-side warning.
 
 ## Run and deploy
 
 Use Node 22.12+ (Node 24 is suitable for Vercel). Run `npm ci`, then `npm run dev`. The Vite development and production-preview servers both serve the real `/api/roblox-stats` handler; no extra proxy or account is needed locally.
 
 `npm run build` checks browser and server TypeScript and creates a static `dist/`. `npm test` checks the stats service; `npm run lint` checks the source. Vercel deploys the static frontend plus the one function under `api/`. No SSR, ISR or Vercel image optimization is used. Vercel's production hostname environment variable supplies the canonical URL and absolute social-image URL at build time.
+
+The server dependency chain uses `.js` import specifiers even in TypeScript source: Vercel emits `.js` files and Node resolves those exact names. Root `tsconfig.json` supplies NodeNext settings because Vercel does not follow TypeScript project references. The browser retains its own bundler configuration. `tests/runtime.test.ts` compiles and invokes the API in plain Node to catch startup errors hidden by Vite/tsx.

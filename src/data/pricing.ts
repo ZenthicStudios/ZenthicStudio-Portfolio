@@ -2,9 +2,9 @@ import type { PaymentPlan } from "./types";
 export const pricing = {
   starting: "Starting from",
   cta: "Start a project",
-  terms: "Negotiable. No maximum. Larger projects scale with scope.",
+  terms: "Minimum project price. No maximum. Final quotes scale with scope.",
   paymentLabel: "How payment works",
-  selector: "Payment currency",
+  selector: "Payment method",
   plans: [
     {
       id: "paypal",
@@ -19,6 +19,39 @@ export const pricing = {
       link: null,
       email: null,
     },
+    ...[
+      {
+        id: "card",
+        name: "Credit / Debit Card",
+        subtitle: "Pay with your preferred card.",
+        note: "We confirm the scope and quote, then arrange a secure card payment directly.",
+        details: "TO BE PROVIDED: Card payment provider and payment link.",
+      },
+      {
+        id: "bank",
+        name: "Bank Transfer",
+        subtitle: "A direct way to get started.",
+        note: "We confirm the quote, currency and transfer details together before work begins.",
+        details:
+          "TO BE PROVIDED: Bank transfer instructions and supported currencies.",
+      },
+      {
+        id: "crypto",
+        name: "Crypto",
+        subtitle: "Flexible payment. Clear scope.",
+        note: "Projects are quoted in USD. We agree on the coin, network and equivalent amount before payment.",
+        details:
+          "TO BE PROVIDED: Accepted coins, networks and payment instructions.",
+      },
+    ].map((method) => ({
+      ...method,
+      currency: "USD",
+      amount: 349,
+      prefix: "$",
+      suffix: "",
+      link: null,
+      email: null,
+    })),
     {
       id: "robux",
       name: "Robux",
@@ -33,6 +66,4 @@ export const pricing = {
       email: null,
     },
   ] satisfies PaymentPlan[],
-  legacyNote:
-    "Previously listed options: Bank Transfer, Credit/Debit Card and Crypto (USDT). Ask about current availability.",
 };

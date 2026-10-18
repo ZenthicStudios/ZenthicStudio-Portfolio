@@ -1,5 +1,18 @@
 # Verification — 18 October 2026
 
+## Follow-up: Vercel startup fix and minor updates
+
+- Public production `/api/roblox-stats` reproduced HTTP 500 `FUNCTION_INVOCATION_FAILED` before changes.
+- An isolated build with `@vercel/node` 24.0.3 reproduced `ERR_MODULE_NOT_FOUND`: emitted JavaScript imported a missing `server/roblox.ts`. After `.js` imports and root NodeNext compiler settings, the same builder's output invoked successfully (HTTP 200, 13 games, official icons and landscape covers).
+- Build, strict TypeScript, lint and seven tests passed. New plain-Node regression covers compiled startup, 405/HEAD, non-cacheable outages and recovery to cacheable valid data.
+- Browser checks: all 13 official covers used, one shared initial poll across four consumers, current email/profile links correct. All four USD methods display $349; Robux remains 99,000 R$. All five CTAs lead to Contact.
+- Twenty mobile payment switches retained existing card nodes. Twenty project filter cycles retained all 13 articles, zero added/removed nodes. Hidden-tab polling remains paused. Viewports 360–3840px have no horizontal overflow; no JavaScript errors observed.
+- Blocking Roblox CDN requests restored local images. Desktop pricing and mobile pricing/contact screenshots were inspected.
+- Vercel plugin installed, but project/log requests returned 403 for the owning team; no teams were visible to this connection and no authenticated CLI was available. This does not invalidate the reproduced/fixed build error, but deployment verification needs the owning team's authorization.
+- The Lighthouse scores below belong to the earlier redesign; they were not rerun for these minor changes.
+
+Follow-up checklist: open the updated deployment, confirm live totals and artwork, switch all five mobile payment options, and open the email/Roblox links. No Roblox Studio test applies.
+
 ## Automated checks actually run
 
 - Production build, strict client/server TypeScript, ESLint: passed.

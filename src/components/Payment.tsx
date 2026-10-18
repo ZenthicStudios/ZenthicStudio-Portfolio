@@ -66,7 +66,6 @@ export default function Payment() {
           </Reveal>
         ))}
       </div>
-      <p className="legacy-payment">{pricing.legacyNote}</p>
     </section>
   );
 }

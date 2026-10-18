@@ -1,10 +1,11 @@
-import { games } from "../src/data/games.ts";
-import { statsConfig as config } from "../src/data/config.ts";
+import { games } from "../src/data/games.js";
+import { statsConfig as config } from "../src/data/config.js";
+import { createArtworkService } from "./artwork.js";
 import type {
   GameConfig,
   GameStats,
   StatsResponse,
-} from "../src/data/types.ts";
+} from "../src/data/types.js";
 
 type Fetcher = typeof fetch;
 type RawGame = { id: number; name: string; visits: number; playing: number };
@@ -30,7 +31,7 @@ export function createStatsService(
   let cachedAt = 0;
   let inFlight: Promise<StatsResponse> | undefined;
   const places = new Map<number, { id: number; expires: number }>();
-  const icons = new Map<number, { url: string; expires: number }>();
+  const artwork = createArtworkService(fetcher, now);
 
   async function json(url: string, signal: AbortSignal): Promise<unknown> {
     const response = await fetcher(url, {
@@ -59,38 +60,6 @@ export function createStatsService(
     });
     return result.universeId;
   }
-  async function refreshIcons(ids: number[], signal: AbortSignal) {
-    const missing = ids.filter((id) => (icons.get(id)?.expires ?? 0) <= now());
-    if (!missing.length) return;
-    try {
-      const payload = (await json(
-        `${config.iconsUrl}?universeIds=${missing.join(",")}&size=${config.iconSize}&format=${config.iconFormat}&isCircular=false`,
-        signal,
-      )) as { data?: { targetId: number; state: string; imageUrl: string }[] };
-      if (!Array.isArray(payload.data)) return;
-      for (const icon of payload.data) {
-        if (
-          missing.includes(icon.targetId) &&
-          icon.state === "Completed" &&
-          typeof icon.imageUrl === "string"
-        ) {
-          const url = new URL(icon.imageUrl);
-          if (
-            url.protocol === "https:" &&
-            (url.hostname.endsWith(".rbxcdn.com") ||
-              url.hostname === "rbxcdn.com")
-          ) {
-            icons.set(icon.targetId, {
-              url: url.href,
-              expires: now() + config.iconCacheMs,
-            });
-          }
-        }
-      }
-    } catch {
-      /* Artwork is optional. The verified local asset remains available. */
-    }
-  }
   async function refresh(): Promise<StatsResponse> {
     const controller = new AbortController();
     const timer = setTimeout(() => controller.abort(), config.timeoutMs);
@@ -111,7 +80,7 @@ export function createStatsService(
           `${config.gamesUrl}?universeIds=${ids.join(",")}`,
           controller.signal,
         ),
-        refreshIcons(ids, controller.signal),
+        artwork.refresh(ids, controller.signal),
       ]);
       const raw = (payload as { data?: RawGame[] }).data;
       if (!Array.isArray(raw)) throw new Error("Invalid games response");
@@ -133,7 +102,8 @@ export function createStatsService(
           visits: value.visits,
           playing: value.playing,
           rank: 0,
-          thumbnail: icons.get(id)?.url ?? game.thumbnail,
+          thumbnail: artwork.icon(id) ?? game.thumbnail,
+          cover: artwork.cover(id),
         };
       });
       ranked.sort((a, b) => {
@@ -161,7 +131,11 @@ export function createStatsService(
       };
       cachedAt = now();
       return cached;
-    } catch {
+    } catch (error) {
+      console.warn(
+        "[roblox-stats] Refresh failed:",
+        error instanceof Error ? error.message : "Unknown upstream failure",
+      );
       return cached ? { ...cached, stale: true } : empty();
     } finally {
       clearTimeout(timer);

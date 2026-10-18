@@ -15,6 +15,8 @@ export const statsConfig = {
   gamesUrl: "https://games.roblox.com/v1/games",
   universeUrl: "https://apis.roblox.com/universes/v1/places",
   iconsUrl: "https://thumbnails.roblox.com/v1/games/icons",
+  thumbnailsUrl: "https://thumbnails.roblox.com/v1/games/multiget/thumbnails",
+  thumbnailSize: "768x432",
   iconSize: "512x512",
   iconFormat: "Png",
 } as const;

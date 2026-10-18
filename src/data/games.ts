@@ -1,5 +1,5 @@
-import { projects } from "./projects.ts";
-import type { GameConfig } from "./types.ts";
+import { projects } from "./projects.js";
+import type { GameConfig } from "./types.js";
 
 // Projects with a game identity join the live ranking automatically.
 // Additional games can be listed here without creating a portfolio project.

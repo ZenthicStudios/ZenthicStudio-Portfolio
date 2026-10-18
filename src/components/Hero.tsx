@@ -11,7 +11,9 @@ import { site } from "../data/site";
 import { projects } from "../data/projects";
 import { interaction, formats } from "../data/config";
 import { Action } from "./Primitives";
+import { useRobloxStats } from "../hooks/useRobloxStats";
 export default function Hero() {
+  const { data } = useRobloxStats();
   const ref = useRef<HTMLElement>(null);
   const inView = useInView(ref);
   const reduced = useReducedMotion();
@@ -26,6 +28,7 @@ export default function Hero() {
   );
   const project =
     projects.find((item) => item.slug === site.hero.previewSlug) ?? projects[0];
+  const game = data?.games.find((item) => item.slug === project.slug);
   return (
     <section id="home" ref={ref} className={`hero ${inView ? "in-view" : ""}`}>
       <m.div
@@ -90,11 +93,15 @@ export default function Hero() {
           rel="noopener noreferrer"
         >
           <img
-            src={project.thumbnail}
+            src={game?.cover ?? project.thumbnail}
             alt={project.name}
             width="768"
             height="432"
             fetchPriority="high"
+            onError={(event) => {
+              if (!event.currentTarget.src.endsWith(project.thumbnail))
+                event.currentTarget.src = project.thumbnail;
+            }}
           />
           <div>
             <span className="eyebrow">{site.hero.feature}</span>

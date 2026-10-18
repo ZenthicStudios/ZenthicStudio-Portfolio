@@ -79,7 +79,7 @@ export default function GameCard({
             src={
               featured
                 ? (game?.thumbnail ?? project.icon ?? project.thumbnail)
-                : project.thumbnail
+                : (game?.cover ?? project.thumbnail)
             }
             alt={project.name}
             width={featured ? 512 : 768}

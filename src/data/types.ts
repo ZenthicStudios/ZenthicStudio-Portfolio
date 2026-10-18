@@ -28,6 +28,7 @@ export interface GameStats {
   playing: number;
   rank: number;
   thumbnail: string;
+  cover?: string;
 }
 export interface StatsResponse {
   totalVisits: number | null;

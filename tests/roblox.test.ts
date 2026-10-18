@@ -49,7 +49,7 @@ test("one batch, exact totals, visit/CCU/name tie breaks, shared ranks and top N
     calls.filter((url) => url.includes("games.roblox.com")).length,
     1,
   );
-  assert.match(calls[0], /universeIds=1,2,3,4/);
+  assert.equal(new URL(calls[0]).searchParams.get("universeIds"), "1,2,3,4");
   assert.equal(cacheControl, "public, s-maxage=60, stale-while-revalidate=300");
 });
 test("20 concurrent readers and 20 cached repeats do not multiply upstream calls", async () => {
@@ -65,7 +65,7 @@ test("20 concurrent readers and 20 cached repeats do not multiply upstream calls
     Array.from({ length: 20 }, () => service.get()),
   );
   for (let index = 0; index < 20; index++) await service.get();
-  assert.equal(calls, 2);
+  assert.equal(calls, 3);
   assert.ok(results.every((result) => result === results[0]));
 });
 test("failure preserves last accepted timestamp and totals, then recovers", async () => {
@@ -113,6 +113,20 @@ test("place resolution and successful icons are cached independently across stat
     const url = String(input);
     calls.push(url);
     if (url.includes("/universe")) return response({ universeId: 1 });
+    if (url.includes("multiget/thumbnails"))
+      return response({
+        data: [
+          {
+            universeId: 1,
+            thumbnails: [
+              {
+                state: "Completed",
+                imageUrl: "https://tr.rbxcdn.com/cover.png",
+              },
+            ],
+          },
+        ],
+      });
     if (url.includes("thumbnails.roblox.com"))
       return response({
         data: [
@@ -134,10 +148,11 @@ test("place resolution and successful icons are cached independently across stat
   time += 61_000;
   await service.get();
   assert.equal(initial.games[0].thumbnail, "https://tr.rbxcdn.com/icon.png");
+  assert.equal(initial.games[0].cover, "https://tr.rbxcdn.com/cover.png");
   assert.equal(calls.filter((url) => url.includes("/universe")).length, 1);
   assert.equal(
     calls.filter((url) => url.includes("thumbnails.roblox.com")).length,
-    1,
+    2,
   );
   assert.equal(
     calls.filter((url) => url.includes("games.roblox.com")).length,

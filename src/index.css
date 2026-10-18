@@ -1165,10 +1165,6 @@ main,
 .payment-note p {
   margin-top: var(--space-2);
 }
-.legacy-payment {
-  margin-top: var(--space-6);
-  font-size: var(--text-xs);
-}
 .payment-toggle {
   display: none;
 }
@@ -1636,6 +1632,7 @@ main,
   }
   .payment-toggle {
     display: flex;
+    flex-wrap: wrap;
     gap: var(--space-2);
     margin-bottom: var(--space-6);
   }

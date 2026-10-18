@@ -9,8 +9,15 @@ export const socials = [
   {
     id: "email",
     label: "Email",
-    value: "ZenthicDev@gmail.com",
-    href: "mailto:ZenthicDev@gmail.com",
+    value: "ZenthicStudios@gmail.com",
+    href: "mailto:ZenthicStudios@gmail.com",
     external: false,
+  },
+  {
+    id: "roblox",
+    label: "Roblox",
+    value: "Zenthic06",
+    href: "https://www.roblox.com/users/5005008636/profile",
+    external: true,
   },
 ];

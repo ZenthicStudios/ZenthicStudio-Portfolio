@@ -56,7 +56,7 @@ export const pricing = {
       id: "robux",
       name: "Robux",
       currency: "R$",
-      amount: 99000,
+      amount: 99999,
       prefix: "",
       suffix: " R$",
       subtitle: "Built for the Roblox ecosystem.",

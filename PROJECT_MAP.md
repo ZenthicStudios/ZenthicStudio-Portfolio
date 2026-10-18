@@ -15,7 +15,7 @@ There is no Roblox game framework, player data store, persistent user data, curr
 | `src/data/projects.ts` | All 13 existing projects, stable slugs, tags, roles, links, images, place/universe IDs | Hero, Stats, Projects, TopGames, games.ts |
 | `src/data/games.ts` | Derived game list + optional additional games | server/roblox.ts, TopGames |
 | `src/data/site.ts` | Copy, navigation, SEO, services, developer biography, process, empty testimonials | All section components, Chrome, Primitives, ErrorBoundary, Vite metadata plugin |
-| `src/data/pricing.ts` | PayPal, Credit/Debit Card, Bank Transfer and Crypto at $349 minimum; Robux at 99,000 R$; no upper caps | Payment |
+| `src/data/pricing.ts` | PayPal, Credit/Debit Card, Bank Transfer and Crypto at $349 minimum; Robux at 99,999 R$; no upper caps | Payment |
 | `src/data/socials.ts` | Discord, updated contact email and Zenthic06 Roblox profile | Contact, ErrorBoundary, index.html fallback checked |
 | `src/data/config.ts` | API URLs, timing, cache, ranking, formatting, motion settings | Server, hook, Chrome, Hero, GameCard, Primitives, Process, Payment, Stats, TopGames, API tests |
 | `src/data/types.ts` | Project, game identity, game config, stats response, payment and testimonial shapes | Data files, server, shared hook, GameCard, tests |

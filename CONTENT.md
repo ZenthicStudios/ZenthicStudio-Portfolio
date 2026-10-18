@@ -17,7 +17,7 @@ The 13 existing projects retain their names, contribution descriptions and Roblo
 
 ## Pricing and payment
 
-Edit `src/data/pricing.ts`. It owns amounts, symbols, labels, notes, optional payment links/emails, and the payment-detail placeholders. USD starts at $349; Robux starts at 99,000 R$. Neither has a ceiling.
+Edit `src/data/pricing.ts`. It owns amounts, symbols, labels, notes, optional payment links/emails, and the payment-detail placeholders. USD starts at $349; Robux starts at 99,999 R$. Neither has a ceiling.
 
 Still to provide:
 

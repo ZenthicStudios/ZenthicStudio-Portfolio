@@ -32,7 +32,7 @@ Credit/Debit Card, Bank Transfer and Crypto are also listed, each with a $349 US
 
 The biography uses the owner's updated wording: **4 years of experience**, with complete games built solo from scratch. Scripting is the specialty; UI, building, rigging, animation and basic modeling are additional scoped services. Be explicit that these add cost beyond scripting with supplied assets, and that a starting budget is not a fixed price for an entire game. Most portfolio work remains described as 80–100% scripted by Zenthic; do not reinterpret that as ownership of every asset. The commission process covers Roblox identity, studio/team, prior games, scope, asset responsibilities, timing and agreed payment structure. The Discord is for hiring Zenthic, with casual general chat; it is not a developer hiring marketplace or a free support service.
 
-`src/data/socials.ts` owns the Discord server invite, the owner's confirmed Discord handle @Zenthic06 and profile link (user 1373741701977342015), ZenthicStudios@gmail.com and the Zenthic06 Roblox profile (user 5005008636). The no-JavaScript contact text in `index.html` matches the email. Discord DM opens the owner's profile; messaging availability follows Discord privacy settings.
+`src/data/socials.ts` owns the Discord server invite, the owner's confirmed Discord handle @Zenthic06 and profile link (user 1373741701977342015), ZenthicStudios@gmail.com and the Zenthic06 Roblox profile (user 5005008636). The no-JavaScript contact text in `index.html` matches the email. Use the labels Discord Server and Discord User. Discord User opens the owner's profile; messaging availability follows Discord privacy settings.
 
 ## Change the theme
 

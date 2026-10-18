@@ -197,7 +197,7 @@ export const site = {
     eyebrow: "HAVE SOMETHING IN MIND?",
     headline: "LET’S BUILD\nWHAT’S NEXT.",
     description:
-      "Hire me for a system or a complete game. Send me a Discord DM or open a private commission ticket in my server. Share your idea, budget, timeline and the assets you already have.",
+      "Commission a custom system or a complete Roblox game. Contact me on Discord or submit a private enquiry through my server. Include your project scope, budget, timeline and available assets.",
     discordCta: "Discuss a commission",
     emailCta: "Send an email",
   },

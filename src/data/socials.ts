@@ -1,7 +1,7 @@
 export const socials = [
   {
     id: "discord",
-    label: "Discord server",
+    label: "Discord Server",
     value: "Zenthic Studios",
     href: "https://discord.gg/FfnvmnMEM2",
     external: true,
@@ -22,7 +22,7 @@ export const socials = [
   },
   {
     id: "discord-dm",
-    label: "Discord DM",
+    label: "Discord User",
     value: "@Zenthic06",
     href: "https://discord.com/users/1373741701977342015",
     external: true,

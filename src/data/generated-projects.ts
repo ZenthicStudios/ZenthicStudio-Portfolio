@@ -7,11 +7,9 @@ export const projects: Project[] = [
     "slug": "build-and-seek",
     "thumbnail": "https://tr.rbxcdn.com/180DAY-57bc4276bfaa1d398a985c8d91745600/768/432/Image/Png/noFilter",
     "icon": "https://tr.rbxcdn.com/180DAY-b0735fff7d583839485e50625e35f147/512/512/Image/Png/noFilter",
-    "tags": [
-      "Solo scripting"
-    ],
-    "role": "100% Scripting",
-    "description": "100% Scripting",
+    "tags": [],
+    "role": "",
+    "description": "",
     "status": "Published",
     "automaticName": false,
     "links": {
@@ -27,11 +25,9 @@ export const projects: Project[] = [
     "slug": "bliss-city-rp",
     "thumbnail": "https://tr.rbxcdn.com/180DAY-34f18eef27f5affe495797bb3e2021b4/768/432/Image/Png/noFilter",
     "icon": "https://tr.rbxcdn.com/180DAY-be7594c30672dfa083ceb3b93f15843e/512/512/Image/Png/noFilter",
-    "tags": [
-      "Solo scripting"
-    ],
-    "role": "100% Scripting",
-    "description": "100% Scripting",
+    "tags": [],
+    "role": "",
+    "description": "",
     "status": "Published",
     "automaticName": false,
     "links": {
@@ -47,11 +43,9 @@ export const projects: Project[] = [
     "slug": "lb-grow-a-lab",
     "thumbnail": "https://tr.rbxcdn.com/180DAY-d5bc30c930ff380abb4c2d25c8aeb9e8/768/432/Image/Png/noFilter",
     "icon": "https://tr.rbxcdn.com/180DAY-48ec8656bb1066b8aeff0e80b3eafe7a/512/512/Image/Png/noFilter",
-    "tags": [
-      "Collaboration"
-    ],
-    "role": "80%+ Scripting Contribution",
-    "description": "80%+ Scripting Contribution",
+    "tags": [],
+    "role": "",
+    "description": "",
     "status": "Published",
     "automaticName": false,
     "links": {
@@ -67,11 +61,9 @@ export const projects: Project[] = [
     "slug": "skylands-tycoon",
     "thumbnail": "https://tr.rbxcdn.com/180DAY-24c4d416c1bfe615eb9df5aa1f132305/768/432/Image/Png/noFilter",
     "icon": "https://tr.rbxcdn.com/180DAY-f2617dc6e37d31f62dd1d60744861cdc/512/512/Image/Png/noFilter",
-    "tags": [
-      "Solo scripting"
-    ],
-    "role": "100% Scripting",
-    "description": "100% Scripting",
+    "tags": [],
+    "role": "",
+    "description": "",
     "status": "Published",
     "automaticName": false,
     "links": {
@@ -87,11 +79,9 @@ export const projects: Project[] = [
     "slug": "imposter-mystery",
     "thumbnail": "https://tr.rbxcdn.com/180DAY-bc04e76ddcd6fff03875466b049554aa/768/432/Image/Png/noFilter",
     "icon": "https://tr.rbxcdn.com/180DAY-8777877debe0a1d147c87143b15a2b2b/512/512/Image/Png/noFilter",
-    "tags": [
-      "Solo scripting"
-    ],
-    "role": "100% Scripting",
-    "description": "100% Scripting",
+    "tags": [],
+    "role": "",
+    "description": "",
     "status": "Published",
     "automaticName": false,
     "links": {
@@ -107,11 +97,9 @@ export const projects: Project[] = [
     "slug": "brainrot-case-battles",
     "thumbnail": "https://tr.rbxcdn.com/180DAY-ba64bdae078bea4eae9c46181502a92a/768/432/Image/Png/noFilter",
     "icon": "https://tr.rbxcdn.com/180DAY-2296e222218c170fa0a46dcb77d7d2c5/512/512/Image/Png/noFilter",
-    "tags": [
-      "Solo scripting"
-    ],
-    "role": "100% Scripting",
-    "description": "100% Scripting",
+    "tags": [],
+    "role": "",
+    "description": "",
     "status": "Published",
     "automaticName": false,
     "links": {
@@ -127,11 +115,9 @@ export const projects: Project[] = [
     "slug": "plants-vs-anime-baddies",
     "thumbnail": "https://tr.rbxcdn.com/180DAY-671eb07e792359563ac59002cb1ff7b2/768/432/Image/Png/noFilter",
     "icon": "https://tr.rbxcdn.com/180DAY-ac52aa59c8d1e9f00db9a48d367b8316/512/512/Image/Png/noFilter",
-    "tags": [
-      "Solo scripting"
-    ],
-    "role": "100% Scripting",
-    "description": "100% Scripting",
+    "tags": [],
+    "role": "",
+    "description": "",
     "status": "Published",
     "automaticName": false,
     "links": {
@@ -147,11 +133,9 @@ export const projects: Project[] = [
     "slug": "raft-for-brainrots",
     "thumbnail": "https://tr.rbxcdn.com/180DAY-eb8e53246c20ddbbc66bfabb7a764d47/768/432/Image/Png/noFilter",
     "icon": "https://tr.rbxcdn.com/180DAY-40227a0d8d9cd628adc1002be8d942ee/512/512/Image/Png/noFilter",
-    "tags": [
-      "Solo scripting"
-    ],
-    "role": "100% Scripting",
-    "description": "100% Scripting",
+    "tags": [],
+    "role": "",
+    "description": "",
     "status": "Published",
     "automaticName": false,
     "links": {
@@ -167,11 +151,9 @@ export const projects: Project[] = [
     "slug": "shoot-christmas-brainrots",
     "thumbnail": "https://tr.rbxcdn.com/180DAY-a57c3650766ff9882d78865999e6ee0f/768/432/Image/Png/noFilter",
     "icon": "https://tr.rbxcdn.com/180DAY-63ec6f12c2c6dfa2cfd5e994adf6a8a2/512/512/Image/Png/noFilter",
-    "tags": [
-      "Collaboration"
-    ],
-    "role": "80%+ Scripting Contribution",
-    "description": "80%+ Scripting Contribution",
+    "tags": [],
+    "role": "",
+    "description": "",
     "status": "Published",
     "automaticName": false,
     "links": {
@@ -187,11 +169,9 @@ export const projects: Project[] = [
     "slug": "dont-let-brainrots-break-the-wall",
     "thumbnail": "https://tr.rbxcdn.com/180DAY-6857d2c6572c7a908be6ef2b7aa9ad33/768/432/Image/Png/noFilter",
     "icon": "https://tr.rbxcdn.com/180DAY-8bc7b5955fe25702a69bc05b19427e84/512/512/Image/Png/noFilter",
-    "tags": [
-      "Solo scripting"
-    ],
-    "role": "100% Scripting",
-    "description": "100% Scripting",
+    "tags": [],
+    "role": "",
+    "description": "",
     "status": "Published",
     "automaticName": false,
     "links": {
@@ -207,11 +187,9 @@ export const projects: Project[] = [
     "slug": "merge-a-animal",
     "thumbnail": "https://tr.rbxcdn.com/180DAY-cd4164d34d32a4828f7bf9aa4da61cc2/768/432/Image/Png/noFilter",
     "icon": "https://tr.rbxcdn.com/180DAY-1979731edbfd1dde1b3a374666bf486d/512/512/Image/Png/noFilter",
-    "tags": [
-      "Solo scripting"
-    ],
-    "role": "100% Scripting",
-    "description": "100% Scripting",
+    "tags": [],
+    "role": "",
+    "description": "",
     "status": "Published",
     "automaticName": false,
     "links": {
@@ -227,11 +205,9 @@ export const projects: Project[] = [
     "slug": "tag-but-youre-a-slime",
     "thumbnail": "https://tr.rbxcdn.com/180DAY-b5ae0f48a76ae0ed10844c113d445e1a/768/432/Image/Png/noFilter",
     "icon": "https://tr.rbxcdn.com/180DAY-bdc6a1e6ea62161a281e1b846dcf3e91/512/512/Image/Png/noFilter",
-    "tags": [
-      "Solo scripting"
-    ],
-    "role": "100% Scripting",
-    "description": "100% Scripting",
+    "tags": [],
+    "role": "",
+    "description": "",
     "status": "Published",
     "automaticName": false,
     "links": {
@@ -247,11 +223,9 @@ export const projects: Project[] = [
     "slug": "roll-for-items",
     "thumbnail": "https://tr.rbxcdn.com/180DAY-e4a58047795c2c5ce0201dff725072b0/768/432/Image/Png/noFilter",
     "icon": "https://tr.rbxcdn.com/180DAY-5c1dbab81b740af0f0fc1f4a41c15b90/512/512/Image/Png/noFilter",
-    "tags": [
-      "Solo scripting"
-    ],
-    "role": "100% Scripting",
-    "description": "100% Scripting",
+    "tags": [],
+    "role": "",
+    "description": "",
     "status": "Published",
     "automaticName": false,
     "links": {
@@ -260,6 +234,24 @@ export const projects: Project[] = [
     "game": {
       "placeId": 122854503601959,
       "universeId": 10429339100
+    }
+  },
+  {
+    "name": "Build a Base vs Chickens 🐔",
+    "slug": "roblox-10593173061",
+    "thumbnail": "https://tr.rbxcdn.com/180DAY-4b45f21a2b1d894146636c3493f2e76c/768/432/Image/Png/noFilter",
+    "icon": "https://tr.rbxcdn.com/180DAY-9bcd918db9d83c93826b0bfc46bf2adf/512/512/Image/Png/noFilter",
+    "tags": [],
+    "role": "",
+    "description": "",
+    "status": "",
+    "automaticName": true,
+    "links": {
+      "play": "https://www.roblox.com/games/80750612129879"
+    },
+    "game": {
+      "placeId": 80750612129879,
+      "universeId": 10593173061
     }
   }
 ];
@@ -290,7 +282,7 @@ export const initialStats: StatsResponse = {
       "slug": "roll-for-items",
       "universeId": 10429339100,
       "name": "Roll For Avatar Items",
-      "visits": 261057,
+      "visits": 261059,
       "playing": 2,
       "rank": 3,
       "thumbnail": "https://tr.rbxcdn.com/180DAY-5c1dbab81b740af0f0fc1f4a41c15b90/512/512/Image/Png/noFilter",
@@ -377,12 +369,22 @@ export const initialStats: StatsResponse = {
       "cover": "https://tr.rbxcdn.com/180DAY-b5ae0f48a76ae0ed10844c113d445e1a/768/432/Image/Png/noFilter"
     },
     {
+      "slug": "roblox-10593173061",
+      "universeId": 10593173061,
+      "name": "Build a Base vs Chickens 🐔",
+      "visits": 2216,
+      "playing": 0,
+      "rank": 12,
+      "thumbnail": "https://tr.rbxcdn.com/180DAY-9bcd918db9d83c93826b0bfc46bf2adf/512/512/Image/Png/noFilter",
+      "cover": "https://tr.rbxcdn.com/180DAY-4b45f21a2b1d894146636c3493f2e76c/768/432/Image/Png/noFilter"
+    },
+    {
       "slug": "plants-vs-anime-baddies",
       "universeId": 9069837899,
       "name": "Plants Vs Anime",
       "visits": 1346,
       "playing": 0,
-      "rank": 12,
+      "rank": 13,
       "thumbnail": "https://tr.rbxcdn.com/180DAY-ac52aa59c8d1e9f00db9a48d367b8316/512/512/Image/Png/noFilter",
       "cover": "https://tr.rbxcdn.com/180DAY-671eb07e792359563ac59002cb1ff7b2/768/432/Image/Png/noFilter"
     },
@@ -392,7 +394,7 @@ export const initialStats: StatsResponse = {
       "name": "Shoot Christmas Brainrots!",
       "visits": 472,
       "playing": 0,
-      "rank": 13,
+      "rank": 14,
       "thumbnail": "https://tr.rbxcdn.com/180DAY-63ec6f12c2c6dfa2cfd5e994adf6a8a2/512/512/Image/Png/noFilter",
       "cover": "https://tr.rbxcdn.com/180DAY-a57c3650766ff9882d78865999e6ee0f/768/432/Image/Png/noFilter"
     }
@@ -422,15 +424,15 @@ export const initialStats: StatsResponse = {
       "slug": "roll-for-items",
       "universeId": 10429339100,
       "name": "Roll For Avatar Items",
-      "visits": 261057,
+      "visits": 261059,
       "playing": 2,
       "rank": 3,
       "thumbnail": "https://tr.rbxcdn.com/180DAY-5c1dbab81b740af0f0fc1f4a41c15b90/512/512/Image/Png/noFilter",
       "cover": "https://tr.rbxcdn.com/180DAY-e4a58047795c2c5ce0201dff725072b0/768/432/Image/Png/noFilter"
     }
   ],
-  "totalVisits": 3426252,
+  "totalVisits": 3428470,
   "totalPlaying": 2,
-  "updatedAt": "2026-11-11T16:06:26.346Z",
+  "updatedAt": "2026-11-11T16:16:50.943Z",
   "stale": true
 };

@@ -14,7 +14,7 @@ The **Refresh stats** button requests a fresh update, shows progress and tempora
 
 Use a full place link, like `https://www.roblox.com/games/123456/Game-Name`, rather than a Roblox share/invite link. One link per line; blank lines and lines starting with `#` are ignored. Repeated links or different places in the same experience are counted once. Delete a line to remove that game from the portfolio and rankings.
 
-Existing custom titles and contribution labels are preserved. New games do not claim a scripting percentage: Roblox cannot verify your contribution. No extra fields are required.
+Existing custom titles are preserved. Cards show the game, artwork, stats and play link without contribution labels, percentages or ownership statements. No extra fields are required.
 
 If a link is invalid, the game has no public details, or Roblox's details service is unavailable after retries, the build explains the problem and the existing production site stays live. Missing artwork uses a safe fallback until Roblox supplies it. The saved build snapshot keeps genuine rankings available while live stats load or are unavailable; it is labeled as cached data.
 

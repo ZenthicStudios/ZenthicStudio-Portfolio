@@ -14,7 +14,7 @@ There is no Roblox game framework, player data store, persistent user data, curr
 | --- | --- | --- |
 | `games.txt` | Sole required input for adding/removing portfolio games: one Roblox place URL per line | scripts/sync-games.ts |
 | `scripts/sync-games.ts` | Validated link import, dedupe, ID resolution, names/artwork, ranked initial snapshot; runs before dev/build | generated-projects.ts |
-| `src/data/curated-projects.json` | Original editorial titles, slugs and verified contribution labels | Importer; optional for future games |
+| `src/data/curated-projects.json` | Original editorial titles, slugs and local artwork fallbacks | Importer; optional for future games |
 | `src/data/generated-projects.ts` | Automatic project records and cached initial stats; overwritten at build time | projects.ts, useRobloxStats |
 | `src/data/projects.ts` | Re-export of generated project records | Hero, Stats, Projects, TopGames, games.ts |
 | `src/data/games.ts` | Derived game list + optional additional games | server/roblox.ts, TopGames |
@@ -47,7 +47,7 @@ Healthy cache header: `public, s-maxage=60, stale-while-revalidate=300`; stale/e
 
 ## UI lifecycle and performance
 
-Project filter changes hide/reuse existing keyed articles; sorting reorders stable nodes and Motion animates transforms. Cards measure bounds once per pointer entry. Motion's heavy DOM features are split into a separate chunk. All images have explicit dimensions, local compressed fallbacks and lazy loading below the hero. No continuous canvas rendering or per-card polling exists. Observers and listeners disconnect on cleanup; CSS animation pauses offscreen on the hero, marquee and card badges. Reduced motion disables decorative movement and the intro.
+Sorting reorders stable keyed articles and Motion animates transforms; contribution-category filters are no longer shown. Cards measure bounds once per pointer entry. Motion's heavy DOM features are split into a separate chunk. All images have explicit dimensions, local compressed fallbacks and lazy loading below the hero. No continuous canvas rendering or per-card polling exists. Observers and listeners disconnect on cleanup; CSS animation pauses offscreen on the hero, marquee and card badges. Reduced motion disables decorative movement and the intro.
 
 ## Verification
 
@@ -55,7 +55,7 @@ Project filter changes hide/reuse existing keyed articles; sorting reorders stab
 
 ## Commission copy and publishing workflow
 
-The biography and statistics use the owner's updated four years of experience. Site copy now describes complete games built solo from scratch, including simulators and tycoons. Scripting is the specialty; UI, building, basic modeling, rigging and animation are additional scoped services that cost extra beyond scripting with supplied assets. Launch preparation and asset responsibilities are agreed in the scope. Project contribution labels remain scripting-specific. Tsunami Runners retains its permanent slug, IDs and images.
+The biography and statistics use the owner's updated four years of experience. Site copy now describes complete games built solo from scratch, including simulators and tycoons. Scripting is the specialty; UI, building, basic modeling, rigging and animation are additional scoped services that cost extra beyond scripting with supplied assets. Launch preparation and asset responsibilities are agreed in the scope. Project cards omit contribution labels, percentages and ownership statements. Contribution-category filters are removed; live, original and alphabetical sorting remain. Tsunami Runners retains its permanent slug, IDs and images.
 
 The browser and social-preview title is exactly **Zenthic Studios**. `src/data/site.ts` owns one `scriptingYears = 4` value used by the metadata description, hero copy, developer badge and statistics. Hero, Services, Stats and the Vite metadata plugin consume these existing fields. The obsolete previous-portfolio statistics disclosure, its data field and unused CSS were removed. No API, payment contract, animation or data lifecycle changed.
 

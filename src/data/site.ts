@@ -58,7 +58,7 @@ export const site = {
       eyebrow: "SELECTED WORK",
       title: "Ideas made playable.",
       description:
-        "Most projects here are 80–100% scripted by me. I can also share relevant examples where I worked on specific systems.",
+        "A selection of Roblox games from my portfolio.",
     },
     services: {
       number: "04",
@@ -106,10 +106,6 @@ export const site = {
     refresh: "Refresh stats",
   },
   projects: {
-    all: "All work",
-    solo: "Solo scripting",
-    collaboration: "Collaborations",
-    filterLabel: "Filter projects",
     sortLabel: "Sort projects",
     sorts: [
       { value: "rank", label: "Live ranking" },
@@ -122,7 +118,7 @@ export const site = {
     playing: "playing",
     rank: "Rank",
     fallback: "PORTFOLIO ORDER · LIVE RANKING UNAVAILABLE",
-    empty: "No projects match this filter.",
+    empty: "No projects to display.",
     other: "Other Projects",
     otherEmpty: "Looking for a specific system? Ask me for relevant examples beyond the projects shown here.",
     countLabel: "projects",

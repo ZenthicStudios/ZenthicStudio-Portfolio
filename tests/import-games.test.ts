@@ -55,14 +55,15 @@ test("adding only a link automatically imports art, names, counts and top three;
   assert.equal(removed.projects.length, 1);
 });
 
-test("existing titles, contribution labels, stable slugs and optional video links are preserved", async () => {
+test("existing titles, stable slugs and video links are preserved without carrying over contribution labels", async () => {
   const old: Project = { name: "Custom title", slug: "stable-slug", thumbnail: "/old.webp", tags: ["Collaboration"], role: "80% Scripting", description: "80% Scripting", status: "Published", links: { play: link(1), video: "https://example.com/video" }, game: { placeId: 1, universeId: 1 } };
   const result = await importGames(link(1), [old], fetcher);
   const project = result.projects[0];
   assert.equal(project.name, old.name);
   assert.equal(project.slug, old.slug);
-  assert.equal(project.role, old.role);
-  assert.deepEqual(project.tags, old.tags);
+  assert.equal(project.role, "");
+  assert.equal(project.description, "");
+  assert.deepEqual(project.tags, []);
   assert.equal(project.links.video, old.links.video);
 });
 

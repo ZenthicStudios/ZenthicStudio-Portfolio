@@ -1,5 +1,5 @@
 # Add one Roblox game link per line. Commit to main to publish.
-# Existing contribution labels are preserved automatically.
+# Names, images, stats and rankings update automatically.
 https://www.roblox.com/games/112192910084846/Build-And-Seek
 https://www.roblox.com/games/112476889534187/Bliss-City-RP
 https://www.roblox.com/games/96863560044075/LB-Grow-a-Lab

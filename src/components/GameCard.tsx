@@ -109,14 +109,7 @@ export default function GameCard({
           )}
         </div>
         <div className="card-content">
-          {project.tags.length > 0 && <div className="card-tags">
-            {project.tags.map((tag) => (
-              <span key={tag}>{tag}</span>
-            ))}
-          </div>}
           <h3>{name}</h3>
-          {project.description && <p>{project.description}</p>}
-          {project.role && project.role !== project.description && <p>{project.role}</p>}
           <div className="card-stats">
             <span>
               <Counter value={game?.visits} /> {site.projects.visits}

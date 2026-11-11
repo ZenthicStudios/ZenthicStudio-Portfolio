@@ -5,19 +5,11 @@ import { useRobloxStats } from "../hooks/useRobloxStats";
 import { SectionHeading } from "./Primitives";
 import GameCard from "./GameCard";
 export default function Projects() {
-  const [filter, setFilter] = useState(site.projects.all);
   const [sort, setSort] = useState(site.projects.sorts[0].value);
   const { data } = useRobloxStats();
   const stats = useMemo(
     () => new Map(data?.games.map((game) => [game.slug, game])),
     [data],
-  );
-  const filters = useMemo(
-    () => [
-      site.projects.all,
-      ...new Set(projects.flatMap((project) => project.tags)),
-    ],
-    [],
   );
   const visible = useMemo(() => {
     const list = [...projects];
@@ -36,22 +28,6 @@ export default function Projects() {
     <section id="projects" className="section">
       <SectionHeading section={site.sections.projects} />
       <div className="project-toolbar">
-        <div
-          className="filters"
-          role="group"
-          aria-label={site.projects.filterLabel}
-        >
-          {filters.map((tag) => (
-            <button
-              key={tag}
-              aria-pressed={filter === tag}
-              className={filter === tag ? "selected" : ""}
-              onClick={() => setFilter(tag)}
-            >
-              {tag}
-            </button>
-          ))}
-        </div>
         <label className="sort-label">
           <span className="sr-only">{site.projects.sortLabel}</span>
           <select
@@ -67,12 +43,7 @@ export default function Projects() {
         </label>
       </div>
       <span className="sr-only" aria-live="polite">
-        {
-          visible.filter(
-            (project) =>
-              filter === site.projects.all || project.tags.includes(filter),
-          ).length
-        }{" "}
+        {visible.length}{" "}
         {site.projects.countLabel}
       </span>
       <div className="project-grid">
@@ -82,9 +53,6 @@ export default function Projects() {
             project={project}
             game={stats.get(project.slug)}
             stale={data?.stale}
-            hidden={
-              filter !== site.projects.all && !project.tags.includes(filter)
-            }
           />
         ))}
       </div>

@@ -2,18 +2,13 @@
 
 You can simply ask for changes in chat. These files keep future edits small and predictable.
 
-## Add a project: one object
+## Add a game: one link
 
-Add one object to `src/data/projects.ts`, with `name`, a unique permanent `slug`, `thumbnail`, `tags`, `role`, `description`, `links`, and `status`. Copy the shape of an existing entry. Add `game: { placeId: ... }` or `game: { universeId: ... }` to connect Roblox statistics. Both are accepted; when both exist, the universe ID is preferred.
+Edit the root `games.txt`, paste a full Roblox place link on a new line, and commit to `main`. Vercel automatically builds the existing project. The importer resolves IDs, fetches the name and official icon/cover, creates the card, and connects live statistics. The portfolio count, totals, sorting and top three update automatically. No other file needs editing. Remove a line to remove that game. Duplicate places/universes count once.
 
-- Save a compressed WebP/AVIF thumbnail in `public/images/` and use `/images/filename.webp`.
-- Keep the slug unchanged when a name, status or description changes. It preserves the card identity and animations.
-- `links.play` and `links.video` are optional. Do not add empty or invented URLs.
-- Tags automatically create the project filters. The full role and description are displayed without duplication.
-- `src/data/games.ts` automatically includes projects with a game ID. Its `additionalGames` array can also add live games without a portfolio card.
-- Rankings, top games, the portfolio count and filters update automatically. No manual rank field is needed.
+`scripts/sync-games.ts` runs before development and production builds. It writes `src/data/generated-projects.ts`, re-exported by `src/data/projects.ts` for both the frontend and API. A real, visit-ranked build snapshot initializes the UI until live data arrives; cached data remains clearly marked. Invalid links or missing public metadata stop the build with an actionable error and leave current production intact. Artwork is optional and safely falls back while live artwork refreshes.
 
-All 13 game IDs and stable slugs are preserved, and all artwork has a local WebP copy. Contribution labels describe scripting rather than every discipline involved in making a game. Tsunami Runners uses the owner's supplied current title and link while retaining its original internal slug and artwork fallbacks.
+`src/data/curated-projects.json` preserves the original 13 titles, stable slugs, scripting contribution labels and local artwork fallbacks. New cards use Roblox names, stable universe-based slugs and automatic images; no contribution percentage or ownership claim is inferred. Existing titles such as Tsunami Runners remain as supplied by the owner. Optional editorial overrides belong in curated data, but are never required to add a game. Full instructions are in README.md.
 
 ## Pricing and payment
 

@@ -4,6 +4,9 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "sync:games": "tsx scripts/sync-games.ts",
+    "predev": "npm run sync:games",
+    "prebuild": "npm run sync:games",
     "dev": "vite",
     "build": "npm run typecheck && vite build",
     "lint": "eslint .",

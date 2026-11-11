@@ -29,6 +29,7 @@ export default function Hero() {
   const project =
     projects.find((item) => item.slug === site.hero.previewSlug) ?? projects[0];
   const game = data?.games.find((item) => item.slug === project.slug);
+  const name = project.automaticName ? (game?.name ?? project.name) : project.name;
   return (
     <section id="home" ref={ref} className={`hero ${inView ? "in-view" : ""}`}>
       <m.div
@@ -94,7 +95,7 @@ export default function Hero() {
         >
           <img
             src={game?.cover ?? project.thumbnail}
-            alt={project.name}
+            alt={name}
             width="768"
             height="432"
             fetchPriority="high"
@@ -105,7 +106,7 @@ export default function Hero() {
           />
           <div>
             <span className="eyebrow">{site.hero.feature}</span>
-            <strong>{project.name}</strong>
+            <strong>{name}</strong>
             <ArrowUpRight aria-hidden="true" />
           </div>
         </a>

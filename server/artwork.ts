@@ -68,10 +68,10 @@ export function createArtworkService(fetcher: typeof fetch, now: () => number) {
   }
   return {
     refresh: (ids: number[], signal: AbortSignal) =>
-      Promise.all([
-        refreshKind(ids, signal, "icon"),
-        refreshKind(ids, signal, "cover"),
-      ]),
+      Promise.all(Array.from({ length: Math.ceil(ids.length / 50) }, (_, index) => {
+        const batch = ids.slice(index * 50, (index + 1) * 50);
+        return Promise.all([refreshKind(batch, signal, "icon"), refreshKind(batch, signal, "cover")]);
+      })),
     icon: (id: number) => icons.get(id)?.url,
     cover: (id: number) => covers.get(id)?.url,
   };

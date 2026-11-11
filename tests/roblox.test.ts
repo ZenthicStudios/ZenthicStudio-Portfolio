@@ -21,6 +21,37 @@ const response = (data: unknown) =>
     headers: { "Content-Type": "application/json" },
   });
 
+test("manual refresh fetches fresh stats before the minute cache expires, deduplicates clicks and preserves data on failure", async () => {
+  let time = 1_000_000;
+  let requests = 0;
+  let visits = 100;
+  let fail = false;
+  const service = createStatsService(games, async input => {
+    if (String(input).includes("games.roblox.com")) {
+      requests++;
+      if (fail) throw Error("Refresh temporarily unavailable");
+      return response({ data: records.map(record => ({ ...record, visits })) });
+    }
+    return response({ data: [] });
+  }, () => time);
+  const first = await service.get();
+  visits = 200;
+  time += 6_000;
+  assert.equal((await service.get()).totalVisits, first.totalVisits);
+  assert.equal(requests, 1);
+  const refreshed = await Promise.all(Array.from({ length: 10 }, () => service.get(true)));
+  assert.equal(requests, 2);
+  assert.ok(refreshed.every(result => result.totalVisits === 800));
+  assert.notEqual(refreshed[0].updatedAt, first.updatedAt);
+  await service.get(true);
+  assert.equal(requests, 2);
+  fail = true;
+  time += 6_000;
+  const outage = await service.get(true);
+  assert.equal(outage.totalVisits, 800);
+  assert.equal(outage.stale, true);
+});
+
 test("one batch, exact totals, visit/CCU/name tie breaks, shared ranks and top N", async () => {
   const calls: string[] = [];
   const fetcher: typeof fetch = async (input) => {

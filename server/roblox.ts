@@ -75,15 +75,19 @@ export function createStatsService(
       ];
       if (!unique.length) return empty();
       const ids = unique.map((item) => item.id);
-      const [payload] = await Promise.all([
-        json(
-          `${config.gamesUrl}?universeIds=${ids.join(",")}`,
+      const batches = Array.from({ length: Math.ceil(ids.length / 50) }, (_, index) => ids.slice(index * 50, (index + 1) * 50));
+      const [payloads] = await Promise.all([
+        Promise.all(batches.map(batch => json(
+          `${config.gamesUrl}?universeIds=${batch.join(",")}`,
           controller.signal,
-        ),
+        ))),
         artwork.refresh(ids, controller.signal),
       ]);
-      const raw = (payload as { data?: RawGame[] }).data;
-      if (!Array.isArray(raw)) throw new Error("Invalid games response");
+      const raw = payloads.flatMap(payload => {
+        const data = (payload as { data?: RawGame[] }).data;
+        if (!Array.isArray(data)) throw new Error("Invalid games response");
+        return data;
+      });
       const byId = new Map(raw.map((game) => [game.id, game]));
       const ranked: GameStats[] = unique.map(({ game, id }) => {
         const value = byId.get(id);
@@ -142,8 +146,10 @@ export function createStatsService(
     }
   }
   return {
-    get(): Promise<StatsResponse> {
-      if (cached && now() - cachedAt < config.cacheSeconds * 1000)
+    get(force = false): Promise<StatsResponse> {
+      // A manual refresh bypasses the normal minute cache, with a short shared
+      // cooldown so repeated clicks cannot flood Roblox on a warm instance.
+      if (cached && now() - cachedAt < (force ? config.manualRefreshCooldownMs : config.cacheSeconds * 1000))
         return Promise.resolve(cached);
       if (!inFlight)
         inFlight = refresh().finally(() => {

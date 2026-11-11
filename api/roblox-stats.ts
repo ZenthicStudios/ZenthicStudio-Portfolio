@@ -14,9 +14,10 @@ export default async function handler(
     response.end(JSON.stringify({ error: "Method not allowed" }));
     return;
   }
-  const result = await robloxStats.get();
+  const manual = new URL(request.url ?? "/", "http://localhost").searchParams.get("refresh") === "1";
+  const result = await robloxStats.get(manual);
   // Do not replace a healthy CDN snapshot with an empty or stale outage response.
-  response.setHeader("Cache-Control", result.stale ? "no-store" : cacheControl);
+  response.setHeader("Cache-Control", result.stale || manual ? "no-store" : cacheControl);
   response.statusCode = 200;
   response.end(request.method === "HEAD" ? undefined : JSON.stringify(result));
 }

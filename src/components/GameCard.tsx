@@ -36,6 +36,7 @@ export default function GameCard({
   const rotateX = useSpring(rx, interaction.spring);
   const rotateY = useSpring(ry, interaction.spring);
   const rank = game?.rank ?? position;
+  const name = project.automaticName ? (game?.name ?? project.name) : project.name;
   const rectRef = useRef<DOMRect | null>(null);
   function move(event: MouseEvent<HTMLElement>) {
     if (reduced || !matchMedia(interaction.finePointer).matches) return;
@@ -81,15 +82,17 @@ export default function GameCard({
                 ? (game?.thumbnail ?? project.icon ?? project.thumbnail)
                 : (game?.cover ?? project.thumbnail)
             }
-            alt={project.name}
+            alt={name}
             width={featured ? 512 : 768}
             height={featured ? 512 : 432}
             loading="lazy"
             decoding="async"
             onError={(event) => {
-              const fallback = project.thumbnail;
-              if (!event.currentTarget.src.endsWith(fallback))
-                event.currentTarget.src = fallback;
+              if (event.currentTarget.src === new URL("/favicon.svg", window.location.origin).href) return;
+              const fallback = new URL(project.thumbnail, window.location.origin).href;
+              event.currentTarget.src = event.currentTarget.src !== fallback && event.currentTarget.dataset.fallback !== "true"
+                ? fallback : "/favicon.svg";
+              event.currentTarget.dataset.fallback = "true";
             }}
           />
           {rank && (
@@ -106,14 +109,14 @@ export default function GameCard({
           )}
         </div>
         <div className="card-content">
-          <div className="card-tags">
+          {project.tags.length > 0 && <div className="card-tags">
             {project.tags.map((tag) => (
               <span key={tag}>{tag}</span>
             ))}
-          </div>
-          <h3>{project.name}</h3>
-          <p>{project.description}</p>
-          {project.role !== project.description && <p>{project.role}</p>}
+          </div>}
+          <h3>{name}</h3>
+          {project.description && <p>{project.description}</p>}
+          {project.role && project.role !== project.description && <p>{project.role}</p>}
           <div className="card-stats">
             <span>
               <Counter value={game?.visits} /> {site.projects.visits}

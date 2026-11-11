@@ -1,6 +1,7 @@
 export const statsConfig = {
   endpoint: "/api/roblox-stats",
   refreshMs: 60_000,
+  manualRefreshCooldownMs: 5_000,
   timeoutMs: 5_000,
   clientTimeoutMs: 8_000,
   cacheSeconds: 60,

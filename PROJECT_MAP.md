@@ -12,7 +12,11 @@ There is no Roblox game framework, player data store, persistent user data, curr
 
 | File | Owns | Consumers checked |
 | --- | --- | --- |
-| `src/data/projects.ts` | All 13 existing projects, stable slugs, tags, roles, links, images, place/universe IDs | Hero, Stats, Projects, TopGames, games.ts |
+| `games.txt` | Sole required input for adding/removing portfolio games: one Roblox place URL per line | scripts/sync-games.ts |
+| `scripts/sync-games.ts` | Validated link import, dedupe, ID resolution, names/artwork, ranked initial snapshot; runs before dev/build | generated-projects.ts |
+| `src/data/curated-projects.json` | Original editorial titles, slugs and verified contribution labels | Importer; optional for future games |
+| `src/data/generated-projects.ts` | Automatic project records and cached initial stats; overwritten at build time | projects.ts, useRobloxStats |
+| `src/data/projects.ts` | Re-export of generated project records | Hero, Stats, Projects, TopGames, games.ts |
 | `src/data/games.ts` | Derived game list + optional additional games | server/roblox.ts, TopGames |
 | `src/data/site.ts` | Copy, navigation, SEO, services, developer biography, process, empty testimonials | All section components, Chrome, Primitives, ErrorBoundary, Vite metadata plugin |
 | `src/data/pricing.ts` | PayPal, Credit/Debit Card, Bank Transfer and Crypto at $349 minimum; Robux at 99,999 R$; no upper caps | Payment |
@@ -32,6 +36,8 @@ There is no Roblox game framework, player data store, persistent user data, curr
 | `tsconfig.json` | NodeNext compiler settings for Vercel; browser references retain their own settings | Vercel, runtime regression test |
 
 ## New HTTP contract
+
+Manual refresh uses `GET /api/roblox-stats?refresh=1&t=<timestamp>` with browser `no-store` and a `no-store` response. It bypasses the ordinary 60-second warm cache, subject to a five-second shared cooldown and the existing in-flight deduplication. The button exposes busy state, disables while pending and spins unless reduced motion is requested; failed refreshes retain the last genuine snapshot. Automatic polling keeps the normal cache behavior.
 
 `GET /api/roblox-stats` returns `{ totalVisits: number | null, totalPlaying: number | null, games: GameStats[], topGames: GameStats[], updatedAt: ISO-string | null, stale: boolean }`.
 

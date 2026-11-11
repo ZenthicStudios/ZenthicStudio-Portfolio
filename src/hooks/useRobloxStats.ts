@@ -1,13 +1,14 @@
 import { useEffect, useSyncExternalStore } from "react";
 import { statsConfig as config } from "../data/config";
 import type { StatsResponse } from "../data/types";
+import { initialStats } from "../data/generated-projects";
 
 type Snapshot = {
   data: StatsResponse | null;
   loading: boolean;
   failed: boolean;
 };
-let snapshot: Snapshot = { data: null, loading: true, failed: false };
+let snapshot: Snapshot = { data: initialStats, loading: true, failed: false };
 const listeners = new Set<() => void>();
 let consumers = 0;
 let controller: AbortController | null = null;
@@ -30,16 +31,21 @@ function schedule() {
       void refresh();
     }, retryMs);
 }
-async function refresh() {
+async function refresh(manual = false) {
   if (pending || document.hidden || !consumers) return pending;
   clearTimeout(timer);
   const active = new AbortController();
   controller = active;
   lastAttempt = Date.now();
+  if (manual) {
+    snapshot = { ...snapshot, loading: true };
+    emit();
+  }
   const timeout = setTimeout(() => active.abort(), config.clientTimeoutMs);
   pending = (async () => {
     try {
-      const response = await fetch(config.endpoint, { signal: active.signal });
+      const url = manual ? `${config.endpoint}?refresh=1&t=${lastAttempt}` : config.endpoint;
+      const response = await fetch(url, { signal: active.signal, ...(manual ? { cache: "no-store" as const } : {}) });
       if (!response.ok) throw new Error("Stats unavailable");
       const data = (await response.json()) as StatsResponse;
       if (
@@ -106,5 +112,5 @@ export function useRobloxStats() {
       }
     };
   }, []);
-  return { ...state, refresh };
+  return { ...state, refresh: () => refresh(true) };
 }

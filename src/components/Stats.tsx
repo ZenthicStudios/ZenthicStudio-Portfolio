@@ -54,6 +54,8 @@ export default function Stats() {
           <button
             className="icon-button"
             aria-label={site.stats.refresh}
+            aria-busy={loading}
+            title={loading ? "Refreshing stats…" : site.stats.refresh}
             onClick={() => void refresh()}
             disabled={loading}
           >

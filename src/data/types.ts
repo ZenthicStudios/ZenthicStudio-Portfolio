@@ -3,6 +3,7 @@ export interface GameIdentity {
   universeId?: number;
 }
 export interface Project {
+  automaticName?: boolean;
   name: string;
   slug: string;
   thumbnail: string;

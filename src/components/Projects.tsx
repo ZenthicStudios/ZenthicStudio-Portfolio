@@ -21,7 +21,9 @@ export default function Projects() {
   );
   const visible = useMemo(() => {
     const list = [...projects];
-    if (sort === "name") list.sort((a, b) => a.name.localeCompare(b.name));
+    if (sort === "name") list.sort((a, b) =>
+      (a.automaticName ? (stats.get(a.slug)?.name ?? a.name) : a.name).localeCompare(
+        b.automaticName ? (stats.get(b.slug)?.name ?? b.name) : b.name));
     if (sort === "rank" && data?.games.length)
       list.sort(
         (a, b) =>

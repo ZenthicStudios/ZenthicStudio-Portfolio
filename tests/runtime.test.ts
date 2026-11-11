@@ -4,6 +4,7 @@ import { execFileSync } from "node:child_process";
 import { mkdirSync, mkdtempSync } from "node:fs";
 import { resolve } from "node:path";
 import { pathToFileURL } from "node:url";
+import { games } from "../src/data/games.js";
 
 test("compiled Vercel entry loads in plain Node and preserves HTTP/cache behavior", () => {
   mkdirSync("work", { recursive: true });
@@ -38,10 +39,10 @@ test("compiled Vercel entry loads in plain Node and preserves HTTP/cache behavio
         ? url.searchParams.get('universeIds').split(',').map(id => ({id:Number(id),name:'Game '+id,visits:10,playing:1})) : []});
     };
     const {default:handler} = await import(${JSON.stringify(entry)});
-    async function request(method) {
+    async function request(method, url = '/') {
       const headers = {}; let body;
       const response = { setHeader:(key,value)=>headers[key]=value, end:value=>body=value };
-      await handler({method},response);
+      await handler({method,url},response);
       return {status:response.statusCode,headers,body};
     }
     const rejected = await request('POST');
@@ -54,9 +55,13 @@ test("compiled Vercel entry loads in plain Node and preserves HTTP/cache behavio
     assert.equal(outage.headers['Cache-Control'],'no-store');
     fail = false;
     const healthy = await request('GET');
-    assert.equal(JSON.parse(healthy.body).games.length,13);
+    assert.equal(JSON.parse(healthy.body).games.length,${new Set(games.map(game => game.universeId)).size});
     assert.equal(JSON.parse(healthy.body).stale,false);
     assert.equal(healthy.headers['Cache-Control'],'public, s-maxage=60, stale-while-revalidate=300');
+    const manual = await request('GET','/api/roblox-stats?refresh=1&t=123');
+    assert.equal(manual.status,200);
+    assert.equal(manual.headers['Cache-Control'],'no-store');
+    assert.equal(JSON.parse(manual.body).stale,false);
     const head = await request('HEAD');
     assert.equal(head.body,undefined);
     console.log('runtime checks passed');
